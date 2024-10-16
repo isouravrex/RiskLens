@@ -1,0 +1,185 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Syncfusion Carousel</title>
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/23.1.41/scripts/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2.min.js" type="text/javascript"></script>
+   
+    <link href="https://cdn.syncfusion.com/ej2/23.1.41/styles/material.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="carousel"></div>
+
+    <script>
+        // Create a new Carousel instance
+        var carousel = new ej.navigations.Carousel({
+            // Set the width and height of the carousel
+            width: '500px',
+            height: '300px',
+            // Enable autoplay
+            autoplay: false,
+            // Set the interval for autoplay
+            autoplayInterval: 3000,
+            // Set the number of items to show at a time
+            visibleItems: 3,
+            // Set the distance between items
+            itemSpacing: 20,
+            // Set the navigation mode
+            navigationMode: 'bullets',
+            // Enable loop
+            loop: true,
+            // Set the data source
+            dataSource: [], // Initialize empty array
+            // Render the carousel
+            appendTo: '#carousel'
+        });
+
+        // Function to fetch files from the folder and update the carousel data source
+        function fetchFiles() {
+            var folderPath = 'static'; // Replace with your folder path
+
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', folderPath, true);
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    try {
+                        var files = JSON.parse(xhr.responseText); // Assuming the folder contents are returned as a JSON array
+
+                        // Filter and process files based on their types
+                        var filteredFiles = files.filter(function(file) {
+                            var extension = file.name.split('.').pop().toLowerCase();
+                            return ['csv', 'img', 'mp4'].includes(extension);
+                        });
+
+                        // Create an array of objects to represent the carousel items
+                        var carouselData = filteredFiles.map(function(file) {
+                            return {
+                                // Set the image URL for image files
+                                imageUrl: file.name.endsWith('.img') ? file.url : null,
+                                // Set the video URL for MP4 files
+                                videoUrl: file.name.endsWith('.mp4') ? file.url : null,
+                                // Set the CSV file name for CSV files
+                                csvFileName: file.name.endsWith('.csv') ? file.name : null
+                            };
+                        });
+
+                        // Update the carousel data source
+                        carousel.dataSource = carouselData;
+                    } catch (error) {
+                        console.error('Error parsing response:', error);
+                    }
+                } else {
+                    console.error('Error fetching files:', xhr.statusText);
+                }
+            };
+
+            xhr.send();
+        }
+
+        // Call the fetchFiles function to populate the carousel with data
+        fetchFiles();
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive Header</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #6bc7ef;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff5722;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="logo">RiskLens</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    window.onload = function() {
+      var header = document.getElementById('main-header');
+
+      window.onscroll = function() {
+        if (window.pageYOffset > 50) {
+          header.style.backgroundColor = '#222';
+        } else {
+          header.style.backgroundColor = '#333';
+        }
+      };
+    };
+  </script>
+
+</body>
+</html>
+
