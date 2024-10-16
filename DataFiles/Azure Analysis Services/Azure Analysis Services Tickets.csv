@@ -1,0 +1,412 @@
+Sn No,TECHNOLOGY,QUESTION,SOLUTION,SEVERITY,PRIORITY,CREATED_USER,CREATED_DATE,CLOSED_USER,CLOSED_DATE,RESOLUTION_TIME,CITY,Latitude,Longitude
+1,Azure Analysis Services,Issues when importing Power BI modell to Azure Analysis Service,"Try the following solutions:
+1. Check for compatibility: Ensure that the version of the Power BI desktop application you used to create the model is compatible with Azure Analysis Services. You may need to upgrade your version of Power BI desktop or Azure Analysis Services to ensure compatibility.
+2. Verify data source credentials
+3. Check for missing dependencies
+4. Reduce model size: If you are experiencing issues with importing a large model, consider reducing the size of the model by removing any unnecessary tables or columns. This can help to reduce the amount of data that needs to be imported, which can improve performance and reduce the likelihood of errors.
+5. Check the compatibility level of the model: Ensure that the compatibility level of the model is set correctly. The compatibility level should match the version of Analysis Services that you are using.
+6. Check for any customizations: Verify that there are no customizations or extensions in the Power BI model that are not supported in Azure Analysis Services. You may need to remove any unsupported customizations before importing the model.
+7. Test the model before importing",high,low,Grace,22-11-2021,Nathan,24-11-2021,4,Sugar Land,29.58740234,-95.61246491
+2,Azure Analysis Services,Can you suggest any solutions for security issues in Azure Analysis Services?,"Here are some best practices that you can follow to address security issues in Azure Analysis Services:
+1. Implement Role-Based Access Control (RBAC): Use Azure Active Directory (Azure AD) to manage access to Azure Analysis Services by creating groups, roles, and users, and assigning permissions to specific objects.
+2. Secure communication: Make sure that SSL/TLS is enabled to encrypt communications between client and server, and use Azure Private Link or Azure Virtual Network to restrict access to the Azure Analysis Services instance.
+3. Monitor activity: Enable auditing and monitoring to detect suspicious activity and ensure compliance with regulatory requirements.
+4. Implement row-level security: Use row-level security (RLS) to restrict access to specific rows of data based on the user's role.
+5. Use Azure Key Vault: Store and manage encryption keys and secrets in Azure Key Vault to ensure that they are secure and not accessible to unauthorized users.",high,medium,Frank,11-11-2020,James,13-11-2020,21,Washington,38.96872711,-76.84075928
+3,Azure Analysis Services,I am experiencing issues when connecting Azure Analysis Services to my storage account. What steps should I take to resolve this issue?,"Here are some possible solutions:
+1. Ensure that the storage account is in the same region as your Azure Analysis Services instance. If they are in different regions, you may experience latency issues or connection errors.
+2. Make sure that the firewall settings of your storage account are properly configured to allow access from your Azure Analysis Services instance. You can do this by adding the IP address of the Analysis Services instance to the allowed IP address list in the firewall settings.
+3. Check that the connection string is correct and properly formatted. The connection string should include the name of the storage account, the access key, and the container name.
+4. Make sure that the storage account is properly configured to allow access using the access key. You can check this by ensuring that the access key is valid and has not expired.
+5. Check that the credentials used to connect to the storage account have the necessary permissions to access the container. You can do this by checking the access policies in the container settings.
+6. If you are using a virtual network (VNet) with your Azure Analysis Services instance, make sure that the VNet and the storage account are peered or connected via a VPN gateway.
+7. Try restarting both the Azure Analysis Services instance and the storage account to see if that resolves the connection issue.",medium,high,Emily,13-05-2020,Lucas,15-05-2020,4,Murfreesboro,35.76424408,-86.34119415
+4,Azure Analysis Services,"Looking for a performance monitoring tool for Azure Analysis Services, any recommendations?","You can use Metrics from portal that will give you detailed information. here is additional
+information on how to do - - - - > https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-monitor",low,low,David,27-08-2020,Madison,28-08-2020,2,Los Angeles,34.06435013,-118.437088
+5,Azure Analysis Services,"I was wondering, I have two cubes on my Azure Analysis Services with an estimated size of 4.8gb and 500mb (estimated in SSMS). So approximately 5.3gb on my server. But when I go to the metrics in Azure Analysis Services, and click on Memory, I see 9.8gb used. There is so a real gap between those two values.
+
+Any idea how the ""missing"" 4.5gb are used ?","Do you see this change while refreshing data on cubes?
+If yes, then it is usual behaviour of Azure Analysis services where while refreshing the cubes, 2.5 times is the total memory in use approximately until the complete cube is refreshed.
+
+The reason we got from experts is old data is still present in memory until the new one is not fully processed and stored.",low,low,Grace,27-08-2020,Madison,30-08-2020,15,Ventura,34.24124908,-119.1945419
+6,Azure Analysis Services,How do I get the size of my tabular model database in Azure Analysis Services?,"You can get the size of an Analysis Services database in Azure Analysis Services for a Tabular model by following these steps:-
+1. Go to the Azure portal and open your Analysis Services instance.
+2. In the left-hand menu, click on ""Databases"" to see a list of all databases in the instance.
+3. Select the database you want to check the size of.
+4. In the top menu, click on ""Metrics"".
+5. In the ""Metric Namespace"" dropdown, select ""Analysis Services Server"".
+6. In the ""Metric"" dropdown, select ""Database Size"".
+7. Set the time range for the metric you want to view.
+8. The ""Average"" value under ""Metric Value"" will show you the database size in bytes. You can convert this value to a more readable format, such as GB or TB, as needed.
+Alternatively, you can also use the XMLA endpoint to run a DISCOVER_XML_METADATA command to retrieve the size information for the database.",critical,high,Grace,27-08-2020,Gabriella,30-08-2020,3,Sacramento,38.50247574,-121.4231873
+7,Azure Analysis Services,"I'm trying to deploy my tabular model to Azure Analysis services using Visual Studio 2019 but it is keep showing me error below:
+
+Cannot deploy metadata. Reason: An error occurred while connecting to the server.
+
+I have installed latest project extension in Visual Studio 19 but no changes. When I am trying to use Visual Studio 2022 deployment works. Can someone please help?","Here are some potential solutions:
+1. Make sure that you have the correct server name, user credentials, and database name in your connection string. Check that you can connect to the server using SQL Server Management Studio or another tool.
+2. Ensure that your firewall rules are set up correctly to allow traffic to and from the server. You can check the firewall settings in the Azure portal.
+3. Check that the Analysis Services service is running and that it is accessible from your machine. You can test this by connecting to the server using SQL Server Management Studio.
+4. Try deploying the model from Visual Studio 2019 on a different machine to see if the issue is related to your local environment.
+5. Check if there are any restrictions or limitations with the specific version of Visual Studio you are using. You may need to update to a later version or apply a hotfix.
+6. Try creating a new project in Visual Studio 2019 and copy over the contents of your existing project. This may help to resolve any configuration issues that are causing the error.",medium,low,Charlie,09-12-2022,Gabriella,12-12-2022,8,Sacramento,38.48671341,-121.459343
+8,Azure Analysis Services,"Azure Analysis Service After Deployment with Import From Server (Tabular)
+have Duplicate Model",https://stackoverflow.com/a/69811295,medium,medium,Emily,09-12-2022,Madison,11-12-2022,6,Douglasville,33.71754074,-84.66046906
+9,Azure Analysis Services,"How to build and deploy SSAS tabular from VSTS through CI/CD locally and
+to Azure Analysis services",https://stackoverflow.com/a/54791971,low,high,Alice,16-07-2023,James,19-07-2023,33,Fort Washington,42.3069191,-88.8275528
+10,Azure Analysis Services,"Whenever I run an SSIS package containing an Analysis Services Processing Task using a scheduled SQL Server job, it fails with an error message mentioning the OLAP storage engine and a measure group processing error. However, it runs without any issues when I run it manually. Can someone please help me figure out what's going on?","The SQL Server Agent service account may not have sufficient permissions. You can validate this by doing any of the following:
+1. Add the service account to the Administrators group on the analysis services server to validate this issue. Let the job run as scheduled.
+2. Create a proxy that runs under your credentials and set the job to execute under the proxy. Let the job run as scheduled.
+3. Change the SQL Server Agent to use your credentials. Let the job run as scheduled.
+If the job completes successfully after making any of the above changes, then you have a permission issue that you need to resolve.",medium,low,Charlie,25-09-2021,Gabriella,26-09-2021,25,Atlanta,33.68620682,-84.49389648
+11,Azure Analysis Services,How can I prevent locking conflicts and E_FAIL errors when querying an OLAP cube in Analysis Services that is being updated frequently through an SSIS package with a processing task?,"If you want to avoid this problem I suggest you process a copy of the cube on another instance or server and then synchronise the processed cube to the server queried by your application.
+This will prevent future locking problems and be invisible to the end user.
+OR
+https://stackoverflow.com/a/66989042",medium,low,Frank,16-01-2022,James,17-01-2022,34,Colorado Springs,38.82530975,-104.7645721
+12,Azure Analysis Services,What is the best way to execute a SSAS project as automated process?,"I would go the SSIS path, as you can easily log the SSAS messages e.g. to the msdb..sysssislog table. This is crucial for debugging and production support.
+
+I prefer to use one task that issues a Process Full command against the Database. This has less moving parts and will completely rollback on its own if there is an error.
+
+SSIS also has major advantages as a platform e.g. control flow, configuration, deployment, source control.",critical,low,Grace,16-01-2022,Finn,18-01-2022,11,Tempe,33.40329361,-111.9140549
+13,Azure Analysis Services,"Are there any solutions to address the problem of several performance rules 
+not working with my SSAS instances?","To troubleshoot the issue, you can try the following steps:
+1. Check the compatibility of the performance rule with your SSAS version.
+2. Check the permissions of the user account used to run the PBI ASWL feature.
+3. Check the configuration of your SSAS instance.
+4. Check the network connectivity of your SSAS instance.",low,low,Frank,17-09-2021,Daniel,20-09-2021,35,Fort Lauderdale,26.0984993,-80.27095032
+14,Azure Analysis Services,"I am facing authentication errors in Azure Analysis Services, what can I do to resolve them?","Here are some possible solutions:
+1. Check if the Azure Analysis Services instance is properly configured to use the correct Azure Active Directory tenant and application.
+2. Ensure that the Azure Active Directory application has the necessary permissions to access the Azure Analysis Services instance.
+3. Check if the Azure Active Directory application has been properly registered in the Azure portal.
+4. Verify that the user attempting to connect has been granted the necessary permissions to access the Azure Analysis Services instance.
+5. Ensure that the connection string used to connect to Azure Analysis Services includes the correct Azure Active Directory credentials and authentication method.
+6. If using a custom Active Directory domain, ensure that the domain is properly configured in Azure Active Directory.
+7. Check if there are any firewall or network issues that are preventing the connection to Azure Analysis Services.
+8. Ensure that the user attempting to connect has the necessary permissions to access any underlying data sources used by Azure Analysis Services.",high,low,Emily,17-09-2021,Iris,18-09-2021,29,Sacramento,38.50247574,-121.4231873
+15,Azure Analysis Services,Not able to connect to Azure Analysis Service instance from SSMS/VS/PowerBI desktop,https://stackoverflow.com/a/40413916,medium,medium,Frank,17-09-2021,Nathan,20-09-2021,29,San Diego,32.7794342,-117.1718597
+16,Azure Security,"invalid_grant or unauthorized_client, 50126:
+Sign in fails for federated users with error code 50126 (sign in succeeds for cloud users). Error message is similar to:
+Reason: Bad Request, Detailed Response: {""error"":""invalid_grant"",""error_description"":""AADSTS70002: Error validating credentials. AADSTS50126: Invalid username or password\r\nTrace ID: 09cc9b95-4354-46b7-91f1-efd92665ae00\r\n Correlation ID: 4209bedf-f195-4486-b486-95a15b70fbe4\r\nTimestamp: 2019-01-28 17:49:58Z"",""error_codes"":[70002,50126], ""timestamp"":""2019-01-28 17:49:58Z"",""trace_id"":""09cc9b95-4354-46b7-91f1-efd92665ae00"",""correlation_id"":""4209bedf-f195-4486-b486-95a15b70fbe4""}",The Global Administrator of the Azure AD tenant should enable Azure AD to use password hashes for ADFS backed users. Apply the AllowCloudPasswordValidationPolicy as shown in the article Use Enterprise Security Package in HDInsight.,low,low,Charlie,27-12-2021,Lucas,30-12-2021,30,Caguas,18.23714256,-66.37059784
+17,Azure Security,What are the two types of keys available in encryption in Azure?,"Key Vault supports RSA and EC keys. Managed HSM supports RSA, EC, and symmetric keys.",medium,low,Charlie,27-12-2021,Harry,29-12-2021,35,Caguas,18.23714256,-66.37059784
+18,Azure Security,"invalid_grant or unauthorized_client, 50034:
+Sign in fails with error code 50034. Error message is similar to:
+{""error"":""invalid_grant"",""error_description"":""AADSTS50034: The user account Microsoft.AzureAD.Telemetry.Diagnostics.PII does not exist in the 0c349e3f-1ac3-4610-8599-9db831cbaf62 directory. To sign into this application, the account must be added to the directory.\r\nTrace ID: bbb819b2-4c6f-4745-854d-0b72006d6800\r\nCorrelation ID: b009c737-ee52-43b2-83fd-706061a72b41\r\nTimestamp: 2019-04-29 15:52:16Z"", ""error_codes"":[50034],""timestamp"":""2019-04-29 15:52:16Z"",""trace_id"":""bbb819b2-4c6f-4745-854d-0b72006d6800"", ""correlation_id"":""b009c737-ee52-43b2-83fd-706061a72b41""}",Use the same user name that works in that portal.,critical,medium,Emily,10-09-2023,Emma,13-09-2023,30,Caguas,18.25640678,-66.37050629
+19,Azure Security,What are different options for security in Azure?,"Microsoft Sentinel.
+Microsoft Defender for Cloud.
+Protect your Azure resources from distributed denial-of-service (DDoS) attacks.
+Azure Bastion. Fully managed service that helps secure remote access to your virtual machines.
+Web Application Firewall. ...
+Azure Firewall. ...
+Azure Firewall Manager.",low,high,Emily,17-07-2022,Madison,19-07-2022,31,Caguas,18.23566818,-66.37059784
+20,Azure Security,"invalid_grant or unauthorized_client, 50053:
+User account is locked out, error code 50053. Error message is similar to:
+{""error"":""unauthorized_client"",""error_description"":""AADSTS50053: You've tried to sign in too many times with an incorrect user ID or password.\r\nTrace ID: 844ac5d8-8160-4dee-90ce-6d8c9443d400\r\nCorrelation ID: 23fe8867-0e8f-4e56-8764-0cdc7c61c325\r\nTimestamp: 2019-06-06 09:47:23Z"",""error_codes"":[50053],""timestamp"":""2019-06-06 09:47:23Z"",""trace_id"":""844ac5d8-8160-4dee-90ce-6d8c9443d400"",""correlation_id"":""23fe8867-0e8f-4e56-8764-0cdc7c61c325""}","Wait for 30 minutes or so, stop any applications that might be trying to authenticate.
+OR
+Change the password in the Azure portal (on your on-premises system) and then wait for 30 minutes for sync to catch up.",high,low,Charlie,19-09-2023,Madison,22-09-2023,20,San Jose,37.32554245,-121.7993469
+21,Azure Security,Received error message - 'interaction_required'.,Use conditional access policy and exempt the HDInisght clusters from MFA as shown in Configure a HDInsight cluster with Enterprise Security Package by using Azure Active Directory Domain Services.,low,medium,Grace,11-03-2022,Finn,12-03-2022,6,Waipahu,21.39421082,-157.9980164
+22,Azure Security,What are the security options for Azure storage accounts?,"Azure Storage protects your data by automatically encrypting it before persisting it to the cloud. You can rely on Microsoft-managed keys for the encryption of the data in your storage account, or you can manage encryption with your own keys.",medium,high,David,11-03-2022,James,12-03-2022,3,Aurora,39.63999939,-104.7163849
+23,Azure Security,How can we grant premissions to authorize a request to access a Service Bus Resource?,"You can use Azure RBAC to grant permissions to a security principal, which may be a user, a group, or an application service principal. Azure AD authenticates the security principal and returns an OAuth 2.0 token. This token can be used to authorize a request to access a Service Bus resource (queue, topic, and so on).",low,low,Grace,20-10-2020,Olivia,21-10-2020,23,Aurora,39.63999939,-104.7163849
+24,Azure Security,How do I secure my Azure virtual machine?,"Azure Bastion. Private and fully managed RDP and SSH access to your virtual machines.
+Web Application Firewall. A cloud-native web application firewall (WAF) service that provides powerful protection for web apps.
+Azure Firewall. ...
+Azure Firewall Manager",medium,low,Frank,20-06-2022,Nathan,22-06-2022,25,Aurora,39.63999939,-104.7163849
+25,Azure Security,Unable to setup an Authenticator registration campaign in the Azure portal,"Go to Azure Portal -> Users -> Click on Per-user MFA
+Now, enable registration campaign in the Azure portal like below:
+Go to Azure Portal -> Security -> Authentication methods -> Policies -> Click on Microsoft Authenticator
+Click on Registration campaign, edit and save like below:
+You can select All users; I added only one user for testing.
+",medium,medium,Frank,20-06-2022,Olivia,23-06-2022,34,Caguas,18.25534058,-66.37050629
+26,Azure Security,Missing access to cross-repo policies or project-wide branch policies in Azure DevOps,"Leave all security groups except ""Project Administrators""",medium,medium,Emily,18-04-2021,Iris,20-04-2021,31,Cumberland,39.65353012,-78.76384735
+27,Azure Security,How to Prevent all the users from creating the subscription directly under the Azure Tenant level,"You can change the default management group for new subscriptions in your tenant: Management Group blade -> Settings.
+
+Then you can enable that write permissions should be required in the management group where new subscriptions are created.
+
+https://learn.microsoft.com/en-us/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group",medium,low,Charlie,18-04-2021,Finn,20-04-2021,33,Caguas,18.2275734,-66.0435791
+28,Azure Security,Do we need to do extra security (storing inside Key Vault) for our Azure Function App Settings?,"They are secure, but users with permissions to the recourse can potentially access them with a role such as e.g. Contributor. Using a Key Vault would allow you to define access controls more precisely.",high,medium,Charlie,18-04-2021,Daniel,21-04-2021,21,Caguas,18.21840668,-66.37054443
+29,Azure Web Storage,"Error ""The value for one of the HTTP headers is not in the correct format"" when using the storage emulator","This scenario typically occurs if you install and use the latest version of the Storage Client 
+Library without updating the storage emulator. You should either install the latest version of the storage emulator or use cloud storage instead of the emulator for development and testing.",low,medium,Grace,18-04-2021,James,20-04-2021,10,Caguas,18.28970146,-66.37055206
+30,Azure Web Storage,"I am experiencing unexpected delays in message delivery on a
+ queue","1. Verify that the application is successfully adding the messages to the queue. Check that the application is not retrying the AddMessage method several times before succeeding.
+
+2. Verify there is no clock skew between the worker role that adds the message to the queue and the worker role that reads the message from the queue. A clock skew makes it appear as if there is a delay in processing.
+
+3. Check if the worker role that reads the messages from the queue is failing. If a queue client calls the GetMessage method but fails to respond with an acknowledgment, the message will remain invisible on the queue until the invisibilityTimeout period expires. At this point, the message becomes available for processing again.
+
+4. Check if the queue length is growing over time. This can occur if you don't have sufficient workers available to process all of the messages that other workers are placing in the queue. Also, check the metrics to see if delete requests are failing and the dequeue count on messages, which might indicate repeated failed attempts to delete the message.
+
+5. Examine the Storage logs for any queue operations that have higher than expected E2ELatency and ServerLatency values over a longer period of time than usual.",low,low,Charlie,11-12-2022,Finn,12-12-2022,21,Caguas,18.28970146,-66.37055206
+31,Azure Web Storage,Root not redirecting to the index document,"When you enable static website hosting on Azure Storage, you need to specify the name of the index document that will be served when a user requests the root URL of your website. For example, if you set the index document name to ""index.html"", then your website will display the content of that file when someone visits https://yourwebsite.zxx.web.core.windows.net/.
+
+However, sometimes you may find that the root URL does not redirect to the index document, and instead shows a blank page or an error message. This could happen for several reasons:
+
+Ensure the name and extension as set in the file name on the portal are the exact same of the file in the $web container, including case sensitivity. File names along with extensions are case sensitive. Even though this is served over HTTP, index.html != Index.html for Static Websites.
+Ensure that the index document exists in the $web container and has a valid content type. You can check this by using Azure Portal, Azure CLI, or Azure Storage Explorer.
+Ensure that there are no other files or folders in the $web container that have the same name as the index document. For example, if you have a folder named ""index.html"" in the $web container, it will conflict with the index document and prevent it from being served.",medium,low,Grace,11-12-2022,Finn,14-12-2022,25,Longmont,40.21243668,-105.244194
+32,Azure Web Storage,"Unable to acquire token, tenant is filtered out","Sometimes you may see an error message that says a token can't be acquired because a tenant
+ is filtered out. This means you're trying to access a resource that's in a tenant you filtered out. To include the tenant, go to the Account Panel. Make sure the checkbox for the tenant specified in the error is selected. For more information on filtering tenants in Storage Explorer, see Managing accounts.",low,low,Grace,17-06-2022,Gabriella,18-06-2022,26,Virginia Beach,36.80849838,-76.20897675
+33,Azure Web Storage,Slow performance when unzipping files in SMB file shares,"Depending on the exact compression method and unzip operation used, decompression operations may perform more slowly on an Azure file share than on your local disk. This is often because unzipping tools perform a number of metadata operations in the process of performing 
+the decompression of a compressed archive. For the best performance, we recommend copying the compressed archive from the Azure file share to your local disk, unzipping there, and then using a copy tool such as Robocopy (or AzCopy) to copy back to the Azure file share. Using a copy tool like Robocopy can compensate for the decreased performance of metadata operations in Azure Files relative to your local disk by using multiple threads to copy data in parallel.",low,high,Bob,17-06-2022,Iris,19-06-2022,20,Caguas,18.24039459,-66.37054443
+34,Azure Web Storage,How to change the Lease state of Azure Blob to Available,"A lease can only be cleanly released by using the lease id that was returned during the original lease operation.
+You can change the lease state to available manually by leasing and releasing the blob using Azure CLI, or any other SDK.",high,medium,Frank,17-06-2022,Madison,18-06-2022,18,Caguas,18.24039459,-66.37054443
+35,Azure Web Storage,"I am trying to upload a binary file (a blob for an excel file, actually) to 
+my storage account but the client fails to authenticate under the error message: 403 (Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.)","This message you'll get if your SAS Token expired. If this is the case just create a new 
+version of the secret using a SAS token with a longer duration. ",critical,medium,Charlie,17-06-2022,Emma,18-06-2022,4,Caguas,18.22725487,-66.37063599
+36,Azure Web Storage,"We created a new Storage Account on Azure. And, when we perform 
+the Connectivity Check, it shows that Blob service (SAS) endpoint is not accessible with message ""Public access is not permitted on this storage account."" The status code is 409."," set AllowBlobPublicAccess to true on your storage accounts. You can do this in the Portal under 
+Configuration for the storage account by setting ""Blob public access"" to Enabled.",high,medium,Bob,17-06-2022,James,19-06-2022,30,Caguas,18.27375031,-66.37059021
+37,Azure Web Storage,"Unable to provision a network drive as Server Endpoint in Azure File Sync. Shows Server endpoint creation fails, with this error: ""MgmtServerJobFailed"" (Error code: -2147024894 or 0x80070002)","This error occurs if the server endpoint path specified is not valid. Verify the 
+server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync does not support mapped drives as a server endpoint path.",medium,high,Charlie,17-06-2022,Daniel,18-06-2022,7,Medina,41.09885407,-81.98916626
+38,Azure Web Storage,"copy file from local machine to Azure Blob not successful. Error INFO: Any 
+empty folders will not be processed, because source and/or destination doesn't have full folder support","As indicated in the error INFO: Any empty folders will not be processed by azcopy, Just create a file inside the source directory and try the azcopy command again.",medium,low,Emily,17-06-2022,Harry,18-06-2022,27,Caguas,18.21155739,-66.37060547
+39,Azure Web Storage,Unable to trigger azure function though service bus queue,"That's an indication that your Function is not activated. And if it's not activated while a message is found on the queue, the potential issue would be Function configuration.
+You need to specify connection string and queue name. If there is no connectivity exception, that tells me the connection string is working, Just validate is the right namespace connection. Then, check if the queue the Function is configured with is the right queue. ",medium,high,David,24-11-2021,Finn,25-11-2021,8,Davis,38.53100205,-121.756752
+40,Azure Web Storage,What are the possible ways available to Scale Out/In VMs based on number of outstanding requests of Azure storage queue?,"You can use Metric alerts (assuming that number of requests is the same as Queue Message Count or some other metric) to create such alerts that are attached to action group that has link to automation service like Azure Automation runbook or Azure Function. The logic of those services will be code that scales out/in.
+",medium,low,Charlie,24-11-2021,James,27-11-2021,19,Houston,29.69557571,-95.61478424
+41,Azure Web Storage,I am not able to create a folder under the blob container,"From the azure portal you can go inside your container —> click on Upload —> in 
+the Advanced section go to Upload to Folder and provide a folder name —> browse the file to upload —> click on Upload button You should see a folder getting created.",medium,low,Henry,24-11-2021,James,27-11-2021,18,San Jose,37.26665497,-121.9148026
+42,Azure Web Storage,Lifecycle policy moving from cool to hot not working,"The policy you have defined is moving the blob from ""Hot"" to ""Cool"" after 2 days of modification. If you want to move the blob from ""Cool"" to ""Hot"" after it gets modified, you need to change the action in the first rule to ""tierToHot"" instead of ""tierToCool"".
+
+Also, you have defined the second rule to enable auto-tiering to ""Hot"" from ""Cool"" based on last access time. However, this rule will only take effect if the blob is currently in ""Cool"" and then accessed. It will not move the blob from ""Cool"" to ""Hot"" immediately after it gets modified.
+
+You can try adding a new rule that moves the blob from ""Cool"" to ""Hot"" based on last modified time.",high,medium,Grace,24-11-2021,Lucas,26-11-2021,30,Caguas,18.23766708,-66.3705368
+43,Azure Web Storage,Missing error details for some failures in Insights for storage account,"You need to create a diagnostic setting to collect resource logs for blobs. Once 
+the diagnostic setting is created you can investigate the logs. If you are using Log Analytics this can be done directly from Logs (preview) under monitoring.",medium,medium,Henry,30-04-2021,Gabriella,03-05-2021,13,Yonkers,40.92575073,-73.87052155
+44,Azure Web Storage,"Unable to create Storage account; error loading the Creation page of 
+Storage account","1. Disable if there is adblock and clear all your cookies restart the browser and relogin into azure portal
+2. If you are using chrome or firefox try opening azure portal from edge browser and create resource
+3. Open InPrivate session from your browser and login into the portal",medium,medium,Emily,05-12-2020,James,06-12-2020,18,Caguas,18.2022934,-66.37060547
+45,Azure Web Storage,"how to set access permissions for azure blob storage container at folder 
+(prefix) level","1. If you use ADLS (HNS) I believe you can set an ACL on a folder . For existing storage account blob container, you would need to copy into an HNS enabled storage account (current situation)
+2. You could produce a SAS for a blob container or for individual blobs(SAS token can be used to restrict access to either an entire blob container or an individual blob. This is because a folder in blob storage is virtual and not a real folder.).",medium,high,Bob,05-12-2020,Daniel,07-12-2020,31,Chicago,41.89483643,-87.76984406
+46,Azure Web Storage,Error trying to delete container in storage account,"If you are getting the ""Failed to delete 1 out of 1 container(s) The request uri is 
+invalid "" Please first try to hard refresh the Screen/Browser page. There may be some interface issue.",medium,low,Grace,04-06-2022,Harry,05-06-2022,27,Caguas,18.28677559,-66.37055969
+47,Azure Web Storage,"Is there a way to enable Soft delete on Storage Account through custom 
+policy","Yes, you can turn on soft deletion for storage accounts through a policy. You can do this through the portal/powershell/azure cli/template options.
+You can ""[s]pecify a retention period between 1 and 365 days."" PowerShell (7 days)",medium,high,Grace,18-09-2022,Lucas,21-09-2022,7,Levittown,40.72494888,-73.52056122
+48,Azure Web Storage,How to stream blobs to Azure Blob Storage with Node.js,"Navigate to your storage account in the Azure Portal and copy the account name 
+and key (under Settings > Access keys) into the .env.example file. Save the file and then rename it from .env.example to .env.",low,low,Emily,14-09-2023,Gabriella,16-09-2023,20,Caguas,18.26325417,-66.37050629
+49,Azure Functions,"When adding two timed function to the same function app, only one of 
+them is triggered","Could probably be caused by a lot of issues like wrong configuration etc.
+ In my case, I had the configuration just right, but found a ""feature"" in Azure Functions. If adding two timed functions with the same class name and the same schedule, Azure executes one of the two functions twice. Changing the class name in one of the functions fixes the issue.",medium,low,Alice,16-07-2023,Harry,18-07-2023,29,San Pablo,37.95482636,-122.332962
+50,Azure Functions,"Azure Function not triggering when deployed, but works correctly in local 
+debugging","there are a few things you can check and try to resolve the problem: 
+Check the connection string: Verify that the connection string for the Event Hub trigger in the local.settings.json file and the connection string in the Azure Function App settings are identical (except for the ""Endpoint"" part). Make sure that the connection string in the Azure Function App settings is using the correct Event Hub namespace and Event Hub name. Check the function.json file: Ensure that your function.json file has the correct configuration for the Event Hub trigger binding. Verify the type, name, direction, eventHubName, and connection properties.",critical,high,Emily,25-09-2021,Emma,26-09-2021,4,Napa,38.30202221,-122.1991196
+51,Azure Functions,"How do I access a virtual machine through point-to-site VPN from a 
+Function?","You can secure communications between a web app and a virtual 
+machine using Azure Point-To-Site VPN the solution, is to select App Service Plan in Hosting Plan. Running the Function on the App Service Plan (rather than on the Consumption Plan), opens up for Networking settings in the Function app settings view.",low,medium,Henry,16-01-2022,Olivia,19-01-2022,11,North Hills,34.23563004,-118.4847031
+52,Azure Functions,How do I set a static IP in Functions?,"Deploying a function in an App Service Environment is the primary way to have static inbound and outbound IP addresses for your functions.
+
+You can also use a virtual network NAT gateway to route outbound traffic through a public IP address that you control",high,low,David,16-01-2022,Gabriella,19-01-2022,27,Chicago,41.6971283,-87.67146301
+53,Azure Functions,How do I restrict internet access to my function?,"You can restrict internet access in a couple of ways:
+
+1. Private endpoints: Restrict inbound traffic to your function app by private link over your virtual network, effectively blocking inbound traffic from the public internet.
+IP restrictions: Restrict inbound traffic to your function app by IP range.
+Under IP restrictions, you are also able to configure Service Endpoints, which restrict your Function to only accept inbound traffic from a particular virtual network.
+2. Removal of all HTTP triggers. For some applications, it's enough to simply avoid HTTP triggers and use any other event source to trigger your function.
+3. Keep in mind that the Azure portal editor requires direct access to your running function. Any code changes through the Azure portal will require the device you're using to browse the portal to have its IP added to the approved list. But you can still use anything under the platform features tab with network restrictions in place.",medium,high,Frank,17-09-2021,Lucas,20-09-2021,27,Princeton,40.3516655,-74.64704132
+54,Azure Functions,How do I restrict my function app to a virtual network?,"You are able to restrict inbound traffic for a function app to a virtual network using Service Endpoints. This configuration still allows the function app to make outbound calls to the internet.
+
+To completely restrict a function such that all traffic flows through a virtual network, you can use a private endpoints with outbound virtual network integration or an App Service Environment.",medium,low,Charlie,17-09-2021,Gabriella,18-09-2021,33,Columbus,39.93561935,-83.13851166
+55,Azure Functions,How can I access resources in a virtual network from a function app?,"You can access resources in a virtual network from a running function by
+ using virtual network integration.",medium,medium,Emily,17-09-2021,Iris,20-09-2021,18,Philadelphia,40.03164673,-75.12759399
+56,Azure Functions,How can I trigger a function from a resource in a virtual network?,"You are able to allow HTTP triggers to be called from a virtual network using Service Endpoints or Private Endpoint connections.
+
+You can also trigger a function from all other resources in a virtual network by deploying your function app to a Premium plan, App Service plan, or App Service Environment.",low,high,David,17-09-2021,Katherine,20-09-2021,24,Houston,29.78499794,-95.37204742
+57,Azure Functions,How can I deploy my function app in a virtual network?,"Deploying to an App Service Environment is the only way to create a 
+function app that's wholly inside a virtual network. ",medium,low,Bob,17-09-2021,Olivia,20-09-2021,26,Chicago,41.92401886,-87.75383759
+58,Azure Functions,"In the Azure portal, it says 'Azure Functions runtime is unreachable'","Besides the normal network restrictions that could prevent your 
+function app from accessing the storage account. Here it mentions an issue where the App_Offline.htm was in the file system, thereby instructing the platform your app is unreachable. It's certainly plausible, so check the kudu system (or az rest) to see if that file exists, remove it, and retry the operation.",medium,medium,Frank,17-09-2021,Finn,19-09-2021,12,Corona,40.74636841,-73.85482025
+59,Azure Functions,Orchestration is stuck in the Pending state,"Use the following steps to troubleshoot orchestration instances that remain stuck indefinitely in the ""Pending"" state.
+
+1. Check the Durable Task Framework traces for warnings or errors for the impacted orchestration instance ID. A sample query can be found in the Trace Errors/Warnings section.
+
+2. Check the Azure Storage control queues assigned to the stuck orchestrator to see if its ""start message"" is still there For more information on control queues, see the Azure Storage provider control queue documentation.
+
+3. Change your app's platform configuration version to “64 Bit”. Sometimes orchestrations don't start because the app is running out of memory. Switching to 64-bit process allows the app to allocate more total memory. This only applies to App Service Basic, Standard, Premium, and Elastic Premium plans. Free or Consumption plans do not support 64-bit processes.",high,high,Charlie,17-09-2021,Harry,20-09-2021,3,Kenner,30.0380249,-90.25691986
+60,Azure Functions,"""ERROR: Exception calling ""Fill"" with ""1"" argument(s): ""Timeout expired. 
+The timeout period elapsed prior to completion of the operation or the server is not responding."" ""","Here are the few suggestions:
+
+1. Have you tried with a simple query from Azure Function and worked (different query that executes within few seconds)? If so, then try setting CommandTimeout as 0.
+2. Make sure there is a network connectivity between Azure Functions and SQL Server and Function App can access SQL server. Here is doc Typical causes and resolutions for the error with common causes/resolutions. Any VNET integration, Firewall in between services? Review https://learn.microsoft.com/en-us/azure/azure-functions/functions-networking-options?tabs=azure-cli networking set up of Azure Functions and Use tcpping tool to test the connectivity (Tools).",high,medium,Alice,19-10-2023,Katherine,20-10-2023,9,Jamaica,40.70199966,-73.80496979
+61,Azure Functions,"while creating the function app from the portal the storage section is 
+missing","Retry the same operation by logging-in to portal from different browser
+ or signing out and signing-in in same browser or by clearing the browser cache.",low,high,Frank,08-12-2022,James,10-12-2022,11,Irwin,40.32811356,-79.70446014
+62,Azure Functions,"How do I add or access an app.config file in Azure functions to add a 
+database connection string?","The best way to do this is to add a Connection String from the Azure portal:
+
+1. From your Function App UI, click Function App Settings
+2. Settings / Application Settings
+3. Add connection strings
+They will then be available using the same logic as if they were in a web.config, e.g.
+
+var conn = System.Configuration.ConfigurationManager
+                 .ConnectionStrings[""MyConn""].ConnectionString;",low,low,Emily,08-12-2022,Lucas,09-12-2022,5,Hamilton,39.28759003,-84.69515228
+63,Azure Functions,"How to rename an Azure Function?
+","The UI does not directly support renaming a Function, but you can work around this using the following manual steps:
+
+1. Stop your Function App. To do this, go under Function app settings / Go To App Service Settings, and click on the Stop button.
+2. Go to Kudu Console: Function app settings / Go to Kudu (article about that)
+3. In Kudu Console, go to D:\home\site\wwwroot and rename the Function folder to the new name
+4. Now go to D:\home\data\Functions\secrets and rename [oldname].json to [newname].json
+5. Then go to D:\home\data\Functions\sampledata and rename [oldname].dat to [newname].dat
+6. Start your function app, in the same place where you stopped it above In the Functions UI, click the refresh button in the top left corner, and your renamed function should appear",medium,medium,David,27-12-2021,Finn,28-12-2021,19,Granada Hills,33.16834259,-117.3173981
+64,Azure Functions,Azure function apps logs not showing,"The log window is a bit fragile and doesn't always show the logs. However, logs are also written to the log files.
+
+You can access these logs from the Kudu console: https://[your-function-app].scm.azurewebsites.net/
+
+From the menu, select Debug console > CMD
+
+On the list of files, go into LogFiles > Application > Functions > Function > [Name of your function]
+
+There you will see a list of log files.",medium,low,Henry,27-12-2021,Nathan,30-12-2021,1,Cupertino,37.32138825,-122.0307388
+65,Azure Functions,"How can I use PostgreSQL with Azure Functions without maxing out 
+connections?","This is the classic problem of using shared resources. You have 50 of 
+these resources in this case. The most effective way to support more consumers would be to reduce the time each consumer uses the resource. Reducing the Connection Idle Lifetime substantially is probably the most effective way. Increasing Timeout does help reduce errors (and is a good choice), but it doesn't increase the throughput. It just smooths out the load. Reducing Maximum Pool size is also good.",medium,low,Emily,27-12-2021,Daniel,29-12-2021,5,Lakewood,40.09635925,-74.21524048
+66,Azure Functions,"I have a queue based function app, however even after publishing 
+messages to queue - function does not get triggered?","Azure function  expects queue messages to be base64 encoded to trigger it. 
+
+So if message pushed to queue is not base64 encoded then the function trigger ignores it.",medium,medium,Charlie,27-12-2021,Finn,30-12-2021,2,Lakewood,41.4828682,-81.77826691
+67,Azure Functions,Azure Functions Cannot Authenticate to Storage Account," Must add the Storage Account user.impersonation permission to the 
+Service Principal!",medium,high,Grace,10-09-2023,Iris,13-09-2023,8,Cincinnati,39.28849411,-84.3551178
+68,Azure Functions,"How can I assign Graph Sites.ReadWrite.All permissions in Tenant B to my 
+Tenant A app?","There are two ways to achieve this:
+Using App Registration or Federated Managed Identity
+
+App Registration
+
+In order to assign Graph Sites.ReadWrite.All permissions in Tenant B to your Tenant A app, you will need to create an app registration for your Azure Function in Tenant
+
+Here are the steps you can follow:
+
+1)Register your Azure Function in Tenant B: a. Sign in to the Azure portal (https://portal.azure.com/) using an account with admin privileges in Tenant B. b. Navigate to ""Azure Active Directory"" > ""App registrations"" > ""New registration"". c. Provide a name for your app registration (e.g., ""AzFunction-TenantB""), and then click ""Register"".
+2)Grant Graph Sites.ReadWrite.All permissions to the app registration in Tenant B: a. In the app registration page for ""AzFunction-TenantB"", go to ""API permissions"" > ""Add a permission"". b. Select ""Microsoft Graph"" and choose the ""Application permissions"" tab. c. Expand the ""Sites"" group and check the ""Sites.ReadWrite.All"" permission. d. Click ""Add permissions"" to save your changes.
+3)Grant admin consent for the permissions: a. Still in the ""API permissions"" tab, click on the ""Grant admin consent for [Tenant B]"" button. You'll need to be an admin in Tenant B to perform this action.
+4)(Share the client ID and tenant ID with Tenant A: a. In the ""Overview"" tab of the ""AzFunction-TenantB"" app registration, make a note of the ""Application (client) ID"" and ""Directory (tenant) ID"" values.
+5)Configure your Azure Function in Tenant A to use the new app registration in Tenant B: a. Sign in to the Azure portal (https://portal.azure.com/) using an account with privileges to manage your Azure Function in Tenant A. b. Go to the Azure Function App, navigate to the ""Configuration"" tab, and update the following values:
+TENANT_B_CLIENT_ID: Set this to the ""Application (client) ID"" from step 4.
+TENANT_B_TENANT_ID: Set this to the ""Directory (tenant) ID"" from step 4.
+6)Update your Azure Function code to use the new app registration when calling Microsoft Graph: a. Use the new TENANT_B_CLIENT_ID and TENANT_B_TENANT_ID values when acquiring a token for Microsoft Graph. This will ensure that your Azure Function uses the app registration from Tenant B when calling the API.
+
+Federated Managed Identity
+
+https://svrooij.io/2022/12/16/poc-multi-tenant-managed-identity/#post
+https://blog.identitydigest.com/azuread-federate-mi/
+
+Note: You may also need to configure the necessary network and firewall settings to allow access to Tenant B from Tenant A.
+
+You may also want to consider granting the necessary permissions to users in Tenant A to access the data in Tenant B. This can be done using Azure AD B2B collaboration.",low,low,Alice,17-07-2022,Gabriella,20-07-2022,1,Bellflower,34.40565872,-117.4170456
+69,Azure Synapse,Queries using Azure AD authentication fails after 1 hour,"Following steps can be followed to work around the problem.
+
+1. It's recommended switching to Service Principal, Managed Identity or Shared Access Signature instead of using user identity for long running queries.
+2. Restarting client (SSMS/ADS) acquires new token to establish the connection.",low,low,Emily,19-09-2023,Harry,22-09-2023,4,Manchester,41.7712059,-72.52085114
+70,Azure Synapse,"Query failures from serverless SQL pool to Azure Cosmos DB analytical 
+store","following actions can be taken as quick mitigation:
+
+1. Retry the failed query. It will automatically refresh the expired token.
+2. Disable the private endpoint. Before applying this change, confirm with your security team that it meets your company security policies.",critical,high,Henry,11-03-2022,Lucas,12-03-2022,7,Princeton,40.80894089,-74.0328598
+71,Azure Synapse,"Azure Cosmos DB analytical store view propagates wrong attributes in the 
+column","following actions can be taken as quick mitigation:
+
+1. Recreate the view by renaming the columns.
+2. Avoid using views if possible.",low,medium,Bob,11-03-2022,Iris,14-03-2022,11,Corona,40.74636841,-73.85482025
+72,Azure Synapse,Failed to delete Synapse workspace & Unable to delete virtual network,The problem can be mitigated by retrying the delete operation.,low,low,Henry,20-10-2020,Katherine,22-10-2020,3,West New York,40.78874207,-74.00895691
+73,Azure Synapse,synapse notebook connection has closed unexpectedly,"try to switch your network environment, such as inside/outside corpnet, or access Synapse Notebook on another workstation.
+
+If you can run notebook on the same workstation but in a different network environment, please work with your network administrator to find out whether the WebSocket connection has been blocked.
+
+If you can run notebook on a different workstation but in the same network environment, please ensure you didn’t install any browser plugin that may block the WebSocket request.",medium,high,Charlie,20-06-2022,Lucas,23-06-2022,33,Bellflower,34.38762283,-117.416748
+74,Azure Synapse,Websocket connection was closed unexpectedly.,"To resolve this issue, rerun your query.
+1. Try Azure Data Studio or SQL Server Management Studio for the same queries instead of Synapse Studio for further investigation.
+2. If this message occurs often in your environment, get help from your network administrator. You can also check firewall settings, and check the Troubleshooting guide.
+3. If the issue continues, create a support ticket through the Azure portal.",medium,low,Henry,20-06-2022,Iris,21-06-2022,7,Brooklyn,40.65769577,-73.94519806
+75,Azure Synapse,Serverless databases aren't shown in Synapse Studio,"If you don't see the databases that are created in serverless SQL pool, 
+check to see if your serverless SQL pool started. If serverless SQL pool is deactivated, the databases won't show. Execute any query, for example, SELECT 1, on serverless SQL pool to activate it and make the databases appear.",high,high,Henry,18-04-2021,Olivia,19-04-2021,22,York,39.95060349,-76.77706909
+76,Azure Synapse,Synapse Serverless SQL pool shows as unavailable,"Incorrect network configuration is often the cause of this behavior. Make 
+sure the ports are properly configured. If you use a firewall or private endpoints, check these settings too.
+
+Finally, make sure the appropriate roles are granted and have not been revoked.",medium,medium,Alice,18-04-2021,Gabriella,20-04-2021,30,Des Plaines,42.04048157,-87.88925934
+77,Azure Synapse,"Can't read, list, or access files in Azure Data Lake Storage","If you use an Azure AD login without explicit credentials, make sure that your Azure AD identity can access the files in storage. To access the files, your Azure AD identity must have the Blob Data Reader permission, or permissions to List and Read access control lists (ACL) in ADLS. For more information, see Query fails because file cannot be opened.
+
+If you access storage by using credentials, make sure that your managed identity or SPN has the Data Reader or Contributor role or specific ACL permissions. If you used a shared access signature token, make sure that it has rl permission and that it hasn't expired.
+
+If you use a SQL login and the OPENROWSET function without a data source, make sure that you have a server-level credential that matches the storage URI and has permission to access the storage.",high,medium,Charlie,18-04-2021,Daniel,20-04-2021,2,Los Angeles,34.03662872,-118.258667
+78,Azure Synapse,query fails with the error File cannot be opened because it does not exist or it is used by another process,"If your query fails with the error File cannot be opened because it does not exist or it is used by another process and you're sure that both files exist and aren't used by another process, serverless SQL pool can't access the file. This problem usually happens because your Azure AD identity doesn't have rights to access the file or because a firewall is blocking access to the file.
+
+By default, serverless SQL pool tries to access the file by using your Azure AD identity. To resolve this issue, you must have proper rights to access the file. The easiest way is to grant yourself a Storage Blob Data Contributor role on the storage account you're trying to query.",high,low,Charlie,18-04-2021,Olivia,21-04-2021,35,Endicott,42.10362625,-76.03582764
+79,Azure Synapse,Query fails because it can't be executed due to current resource constraints,"This message means serverless SQL pool can't execute at this moment. Here are some troubleshooting options:
+
+Make sure data types of reasonable sizes are used.
+If your query targets Parquet files, consider defining explicit types for string columns because they'll be VARCHAR(8000) by default. Check inferred data types.
+If your query targets CSV files, consider creating statistics.
+To optimize your query, see Performance best practices for serverless SQL pool.",critical,high,Bob,11-12-2022,Daniel,14-12-2022,17,Princeton,40.80894089,-74.0328598
+80,Azure Synapse,"Query fails with the error message Bulk load data conversion error (type 
+mismatches or invalid character for the specified code page) for row n, column m [columnname] in the data file [filepath].","To resolve this problem, inspect the file and the data types you chose. Also
+ check if your row delimiter and field terminator settings are correct. The following example shows how inspecting can be done by using VARCHAR as the column type.",high,high,Frank,11-12-2022,Harry,12-12-2022,11,Albuquerque,34.99743652,-106.6525803
+81,Azure Synapse,"Query fails with the error message Column [column-name] of type 
+[type-name] is not compatible with external data type […], it's likely that a PARQUET data type was mapped to an incorrect SQL data type.","To resolve this issue, inspect the file and the data types you chose. This 
+mapping table helps to choose a correct SQL data type. As a best practice, specify mapping only for columns that would otherwise resolve into the VARCHAR data type. Avoiding VARCHAR when possible leads to better performance in queries.",medium,low,Bob,17-06-2022,Madison,20-06-2022,36,Bronx,40.83815384,-73.87194824
+82,Azure Synapse,"The query references an object that is not supported in distributed 
+processing mode","Some objects, like system views, and functions can't be used while you 
+query data stored in Azure Data Lake or Azure Cosmos DB analytical storage. Avoid using the queries that join external data with system views, load external data in a temp table, or use some security or metadata functions to filter external data.",high,medium,Alice,17-06-2022,Lucas,20-06-2022,1,Broken Arrow,36.03966141,-95.80953217
+83,Azure Synapse,"Query returning NULL values instead of partitioning columns or can't find 
+the partition columns","troubleshooting steps:
+
+If you use tables to query a partitioned dataset, be aware that tables don't support partitioning. Replace the table with the partitioned views.
+If you use the partitioned views with the OPENROWSET that queries partitioned files by using the FILEPATH() function, make sure you correctly specified the wildcard pattern in the location and used the proper index for referencing the wildcard.
+If you're querying the files directly in the partitioned folder, be aware that the partitioning columns aren't the parts of the file columns. The partitioning values are placed in the folder paths and not the files. For this reason, the files don't contain the partitioning values.",medium,low,Charlie,17-06-2022,Lucas,18-06-2022,15,Littleton,39.522995,-104.9482193
+84,Azure Synapse,Missing column when using automatic schema inference,"You can easily query files without knowing or specifying schema, by 
+omitting WITH clause. In that case column names and data types will be inferred from the files. Have in mind that if you are reading number of files at once, the schema will be inferred from the first file service gets from the storage. This can mean that some of the columns expected are omitted, all because the file used by the service to define the schema did not contain these columns. To explicitly specify the schema, please use OPENROWSET WITH clause. If you specify schema (by using external table or OPENROWSET WITH clause) default lax path mode will be used. That means that the columns that don’t exist in some files will be returned as NULLs (for rows from those files). To understand how path mode is used, please check the following documentation and sample.",high,medium,Grace,17-06-2022,Iris,18-06-2022,22,Antioch,38.00168991,-121.8279724
+85,Azure Synapse,"Failed to execute query. Error: CREATE EXTERNAL 
+TABLE/DATA SOURCE/DATABASE SCOPED CREDENTIAL/FILE FORMAT is not supported in master database.","1. Create a user database:
+CREATE DATABASE <DATABASE_NAME>
+
+2. Execute a CREATE statement in the context of <DATABASE_NAME>, which failed earlier for the master database.
+
+Here's an example of the creation of an external file format:
+USE <DATABASE_NAME>
+CREATE EXTERNAL FILE FORMAT [SynapseParquetFormat]  
+WITH ( FORMAT_TYPE = PARQUET)",low,high,Henry,17-06-2022,James,20-06-2022,23,Bell Gardens,33.97483063,-118.1829376
+86,Azure Synapse,"Getting an error while trying to create a new Azure AD login or user 
+in a database","check the login you used to connect to your database. The login that's trying to create a new Azure AD user must have permission to access the Azure AD domain and check if the user exists. Be aware that:
+
+SQL logins don't have this permission, so you'll always get this error if you use SQL authentication.
+If you use an Azure AD login to create new logins, check to see if you have permission to access the Azure AD domain.",medium,medium,Alice,17-06-2022,James,19-06-2022,7,Memphis,35.11978149,-89.94573975
+87,Azure Synapse,"Resolving Azure Cosmos DB path has failed with error 'This request is not 
+authorized to perform this operation'.","check to see if you used private endpoints in Azure Cosmos DB. To allow
+ serverless SQL pool to access an analytical store with private endpoints, you must configure private endpoints for the Azure Cosmos DB analytical store.",critical,high,Frank,17-06-2022,Iris,18-06-2022,27,Elk Grove,38.41569519,-121.4185638
+88,Azure Synapse,Delta table created in Spark is not shown in serverless pool,"If you created a Delta table in Spark, and it is not shown in the serverless SQL pool, check the following:
+
+1. Wait some time (usually 30 seconds) because the Spark tables are synchronized with delay.
+2. If the table didn't appear in the serverless SQL pool after some time, check the schema of the Spark Delta table. Spark tables with complex types or the types that are not supported in serverless are not available. Try to create a Spark Parquet table with the same schema in a lake database and check would that table appears in the serverless SQL pool.
+3. Check the workspace Managed Identity access Delta Lake folder that is referenced by the table. Serverless SQL pool uses workspace Managed Identity to get the table column information from the storage to create the table.",high,high,David,24-11-2021,Emma,27-11-2021,19,Elk Grove,38.41569519,-121.4185638
+89,GCP Cloud Storage - Web App,"Failed to fetch metadata from the registry, with 
+reason: generic::permission_denied","To resolve this issue, grant the Storage Admin role to the service account:
+
+To see which account you used, run the gcloud auth list command.
+To learn why assigning only the App Engine Deployer (roles/appengine.deployer) role might not be sufficient in some cases, see App Engine roles.",low,high,Henry,24-11-2021,Finn,26-11-2021,22,La Habra,33.93916321,-117.9495544
+90,GCP Cloud Storage - Web App,"Error: The App Engine appspot and App Engine flexible environment 
+service accounts must have permissions on the image IMAGE_NAME","This error occurs for one of the following reasons:
+
+1. The default App Engine service account does not have the Storage Object Viewer (roles/storage.objectViewer) role.
+
+    To resolve this issue, grant the Storage Object Viewer role to the service account.
+2. Your project has a VPC Service Perimeter which limits access to the Cloud Storage API using access levels.
+
+   To resolve this issue, add the service account you use to deploy your app to the corresponding VPC Service Perimeter accessPolicies.",medium,medium,Alice,24-11-2021,Harry,26-11-2021,11,Santa Ana,33.66559982,-117.8830566
+91,GCP Cloud Storage - Web App,Failed to create cloud build: Permission denied,"This error occurs if you use the gcloud app deploycommand from an account that does not have the Cloud Build Editor (roles/cloudbuild.builds.editor) role.
+
+To resolve this issue, grant the Cloud Build Editor role to the service account that you are using to deploy your app.
+
+To see which account you used, run the gcloud auth list command.",medium,low,Bob,24-11-2021,Madison,25-11-2021,26,Los Angeles,34.07558823,-118.2997131
+92,GCP Cloud Storage - Web App,Timed out waiting for the app infrastructure to become healthy,"To resolve this issue, rule out the following potential causes:
+
+1. Verify that you have granted the Editor (roles/editor) role to your default App Engine service account.
+2. Verify that you have granted the following roles to the service account that you use to run your application (usually the default service account, app-id@appspot.gserviceaccount.com):
+
+    Storage Object Viewer (roles/storage.objectViewer)
+    Logs Writer (roles/logging.logWriter)
+3. Grant the roles if the service account does not have them.
+
+4. If you are deploying in Shared VPC setup and passing instance_tag in app.yaml, refer to this section to fix the issue.",low,high,Grace,30-04-2021,Nathan,02-05-2021,10,Miami,25.83658981,-80.19542694
+93,GCP Cloud Storage - Web App,Invalid value error when deploying in a Shared VPC setup,"To resolve the issue, remove the instance_tag field from app.yaml and 
+redeploy.",medium,medium,Charlie,05-12-2020,James,07-12-2020,29,Union City,40.80119324,-74.48561096

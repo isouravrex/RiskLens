@@ -1,0 +1,443 @@
+Sn No,TECHNOLOGY,QUESTION,SOLUTION,SEVERITY,PRIORITY,CREATED_USER,CREATED_DATE,CLOSED_USER,CLOSED_DATE,RESOLUTION_TIME,CITY,Latitude,Longitude
+1,PowerBI,Issue with Power bi date slicer,"If you are experiencing an issue with the date slicer in Power BI, there could be several reasons why this is happening. Here are some common issues and their potential solutions:
+1. The date slicer is not filtering data correctly: This could be due to incorrect data type or formatting of the date column in the data source. To resolve this issue, check the data type of the date column and ensure that it matches the format of the date slicer.
+2. The date slicer is not displaying all the available dates: This could be due to the range of dates selected in the slicer. To resolve this issue, adjust the range of dates displayed in the slicer or increase the granularity of the slicer.
+3. The date slicer is not working at all: This could be due to a corrupted Power BI file or a bug in the Power BI software. To resolve this issue, try restarting Power BI or creating a new file and recreating the date slicer.
+4. The date slicer is not interacting with other visuals or filters: This could be due to the order of the visuals in the report page or incorrect interaction settings. To resolve this issue, adjust the order of the visuals or update the interaction settings to ensure that the date slicer is interacting with the desired visuals and filters.
+If the issue persists, you may need to consult with a Power BI expert or Microsoft Support for further assistance.",medium,medium,David,08-11-2022,Lucas,09-11-2022,3,Elmhurst,40.74718475,-73.87696838
+2,PowerBI,The date slicer is not filtering data correctly,"If your Power BI date slicer is not filtering data correctly, here are some possible solutions to try:
+1. Check your data
+2. Check your date hierarchy: Verify that your date hierarchy is set up correctly. If your date slicer is not filtering data correctly, it could be because the date hierarchy is not set up correctly. In Power BI, you can set up a date hierarchy by right-clicking on the date field in your data model and selecting ""New Hierarchy.""
+3. Check your date slicer settings: Verify that the date slicer is set up correctly. Check the ""Filters"" pane to ensure that the slicer is set up to filter the correct data field.
+4. Check the date range: Verify that the date range selected in the date slicer is correct. If you are not seeing the expected data, it could be because the date range is incorrect or too narrow.
+5. Check your relationship between data tables: If your data model contains multiple tables, ensure that the tables are correctly related. Incorrect relationships between tables can cause data to be excluded or incorrectly filtered.
+6. Refresh your data
+7. Contact Microsoft Support",critical,medium,David,08-11-2022,Gabriella,11-11-2022,6,San Diego,32.77581406,-117.135437
+3,PowerBI,What are the solutions for resolving issues with B2C authentication environments when using the OData Connector in Power BI?,"Try the following solutions:
+1. Ensure that you have the correct authentication settings: Verify that you have the correct authentication settings for your B2C environment. This may include settings such as the tenant ID, client ID, and client secret.
+2. Check that the application is registered: Ensure that the application you are trying to access is registered in your B2C environment. You may need to register the application manually if it is not already registered.
+3. Confirm that the application has the appropriate permissions: Verify that the application has the appropriate permissions to access the data you are trying to retrieve via the OData Connector. This may require updating the application permissions in your B2C environment.
+4. Check that the user has the correct permissions: Ensure that the user account you are using to access the data has the correct permissions to access the data in the B2C environment.
+5. Try using the OData feed URL directly: If you continue to experience issues, try using the OData feed URL directly in your browser to confirm that you are able to access the data.
+6. Check that the OData Connector version is up to date
+7. Check for known issues or bugs: Check for any known issues or bugs related to B2C authentication environments and the OData Connector, and follow any recommended solutions or workarounds.",critical,high,David,12-06-2022,James,13-06-2022,6,Aurora,39.70932007,-104.8145828
+4,PowerBI,Unchanged Azure Dataflow Shows Validation Error On Flow Expression,"1. Check if the query you have used is valid.
+2. Check all the input fields within the dataflow transformation if there is any field highlighted in red.
+3. If above doesnt work, then delete and create a new dataflow and add your expressions or queries without any errors. Validate everytime you add any transformation to get a clear answer where you are making the error.
+4. Debug will not run if you have any invalid fields within the dataflow. There might be any expression field which is invalid and hence u r getting validation error.",high,low,David,11-10-2021,Daniel,12-10-2021,12,Victorville,34.50935745,-117.3302917
+5,PowerBI,"Power BI Dataflow - Validating Queries - Extremely, Extremely, Extremely Slow","There are a few known limitations to using Enterprise Gateways and dataflows:
+1. Each dataflow may use only one gateway. As such, all queries should be configured using the same gateway.
+2. Changing the gateway impact the entire dataflow.
+3. If several gateways are needed, the best practice is to build several dataflows (one for each gateway) and use the compute or entity reference capabilities to unify the data.
+4. Dataflows are only supported using enterprise gateways. Personal gateways will not be available for selection in the drop down lists and settings screens.
+So it requires to assign an administator role of the gateway to others once you want them to add entities to the dataflow.",medium,medium,Emily,11-10-2021,Madison,14-10-2021,11,Aurora,39.75177002,-104.7829666
+6,PowerBI,Power BI Data Load Hang and Message,"If you are experiencing a data load hang in Power BI, it may be due to a variety of factors such as connectivity issues, large data volumes, or performance problems with the source system.
+To diagnose the issue, you can check the following:
+1. Check the network connection and ensure that the data source is available and accessible.
+2. Check if there are any error messages or warnings in the Power BI error logs.
+3. Check if there are any performance issues with the data source or Power BI environment.
+4. Try reducing the data volume or optimizing the data source query to improve performance.
+If the issue persists, you may need to consult with a Power BI expert or Microsoft Support for further assistance.",high,low,Bob,09-06-2020,Madison,10-06-2020,24,Wayne,39.96281815,-75.05174255
+7,PowerBI,"I've noticed that the calendar month and days in the Power BI date slicer 
+are being displayed in a language other than English, and it's causing some confusion. How can I adjust the language settings to fix this issue?","If my understanding is correct you are trying to embed the Power Bi in your angular application.
+In the embed configuration you can mention, Language and Locale setting.
+var embedConfig = {
+    ...
+    settings: {
+        localeSettings: {
+            language: ""en"",
+            formatLocale: ""en""
+        }
+    }
+};
+Or
+You could add &language=en and &formatlocale=en parameters to the embed URL
+https://powerbiembedurl&language=en&formatlocale=en",medium,medium,David,09-06-2020,Emma,12-06-2020,20,Los Angeles,34.09960938,-118.3507385
+8,PowerBI,"Power BI embedded, direct query, not refreshing","If your Power BI embedded report with a direct query data source is not refreshing, there could be several reasons why this is happening. Here are some common issues and their potential solutions:
+1. The data source is not set up for automatic refresh: In order for the data to refresh in a direct query scenario, the data source must be set up for automatic refresh. Check the settings in the data source and ensure that automatic refresh is enabled.
+2. The refresh schedule is not set correctly: Even if automatic refresh is enabled, the refresh schedule may not be set correctly. Check the settings in the data source and ensure that the refresh schedule is set to a frequency that meets your needs.
+3. The report is not configured for automatic page refresh: If the report is not configured for automatic page refresh, you may need to manually refresh the page to see updated data. Configure the report for automatic page refresh to resolve this issue.
+4. There is a caching issue: In some cases, the data may be cached and not refreshing properly. Clear the cache in the browser or the Power BI service to see if this resolves the issue.
+5. There is a bug in the Power BI software: If none of the above solutions work, it is possible that there is a bug in the Power BI software. Check for any known issues or bugs with the version of Power BI you are using, and consider contacting Microsoft Support for further assistance.
+
+If the issue persists, you may need to consult with a Power BI expert or Microsoft Support for further assistance.",medium,medium,Alice,09-06-2020,Lucas,11-06-2020,15,New Orleans,29.96774292,-90.03494263
+9,PowerBI,Issue publishing report to Power BI Workspace,"If you're having trouble publishing a Power BI report from the desktop application to your Power BI workspace in Azure, there are several things you can try to troubleshoot the issue:
+1. Check your workspace settings: Make sure that your Azure workspace is set up to receive reports published from the desktop application. Check the workspace settings to ensure that the ""Allow external guest users to edit content"" option is turned on.
+2. Check the report size: Large reports may take longer to publish or may exceed the size limit for your workspace. Check the size of your report and consider splitting it into smaller sections or reducing the size of visuals to speed up publishing.
+3. Try publishing from the web: If publishing from the desktop application continues to fail, try publishing the report from the Power BI web portal instead. This can help you identify whether the issue is specific to the desktop application.
+4. Update Power BI desktop
+5. Contact Microsoft Support: If none of the above solutions work, you may need to contact Microsoft Support for further assistance.",high,low,Henry,09-06-2020,Madison,10-06-2020,5,Davis,38.54666138,-121.7412109
+10,PowerBI,"I'm having trouble creating Pivot Columns in Power BI. What could be 
+causing the issue, and how can I fix it?","If you're experiencing issues with Pivot Columns in Power BI, there are several things you can try to troubleshoot the issue:
+1. Check your data
+2. Verify your Power Query settings: Pivot columns can be created using Power Query. Check your Power Query settings to ensure that you are properly defining the columns that you want to pivot.
+3. Check for errors: Look for any error messages that may be related to Pivot Columns. If you receive an error message, read it carefully to understand the nature of the issue.
+4. Refresh your data
+5. Use DAX: Pivot Columns can also be created using DAX. If you're having issues with Power Query, try creating your Pivot Columns using DAX instead.
+6. Update Power BI Desktop
+7. Contact Microsoft Support",medium,low,Frank,09-06-2020,Harry,12-06-2020,21,Bronx,40.9066658,-73.85459137
+11,PowerBI,What resources are available to me if I am unable to resolve a SSL peer certificate or SSH remote key error when using an ODBC driver to connect to Snowflake from Power BI desktop?,"Here are some possible solutions to try:
+1. Check your SSL/TLS version: Verify that your SSL/TLS version is up-to-date and compatible with your ODBC driver version. You may need to update your SSL/TLS version or your ODBC driver to resolve this issue.
+2. Check your certificate: Verify that your SSL certificate is valid and properly configured. You may need to contact your Snowflake administrator to obtain a valid SSL certificate or update your current certificate.
+3. Verify your connection string: Check your ODBC connection string to ensure that it is correctly configured. Make sure that your Snowflake account and credentials are correctly specified.
+4. Check your network configuration: Verify that your network configuration is properly set up and that there are no issues with your firewall or network security settings.
+5. Verify your driver version: Ensure that you are using the latest version of your ODBC driver. You may need to upgrade your driver to resolve this issue.
+6. Check your Power BI version: Verify that you are using the latest version of Power BI desktop. You may need to upgrade to the latest version to resolve this issue.
+7. Contact Snowflake support",high,low,David,09-06-2020,Iris,11-06-2020,5,New Orleans,29.96774292,-90.03494263
+12,PowerBI,Rest API credentials issues in power bi service,"To resolve Rest API credentials issues in Power BI service, try the following solutions:
+1. Verify API key: Double-check the API key to ensure it is correct and valid.
+2. Check access rights: Verify that you have the necessary access rights to use the Rest API.
+3. Obtain a new authorization token: If the authorization token has expired or become invalid, obtain a new token to authenticate the Rest API request.
+4. Check firewall or network settings: Ensure that the necessary ports are open and that any necessary security settings are properly configured to allow access to the Rest API.
+If you are still experiencing issues after trying these solutions, consider contacting the Rest API provider's support team or seeking further assistance from your organization's IT department.",critical,high,Frank,09-06-2020,Gabriella,11-06-2020,14,Raleigh,35.8109436,-78.60021973
+13,PowerBI,"How do I check for network connectivity issues when connecting Power BI 
+to Azure SQL DB?","The Power BI - Azure SQL DB connection issue can occur due to various reasons. Here are some possible solutions:
+1. Check Azure SQL DB firewall settings: Ensure that the IP address of your Power BI service is added to the firewall settings of your Azure SQL DB.
+2. Check Azure SQL DB connection string: Verify that the connection string used in Power BI is correct and up-to-date. Make sure it includes the correct server name, database name, and authentication credentials.
+3. Check authentication method: Ensure that the authentication method used in Power BI matches the one set up for your Azure SQL DB. You can use either SQL Server Authentication or Azure Active Directory Authentication.
+4. Check Azure Active Directory permissions: If you are using Azure Active Directory Authentication, ensure that the user or service principal has sufficient permissions to access the Azure SQL DB.
+5. Check Power BI gateway: If you are using a Power BI gateway to connect to Azure SQL DB, ensure that the gateway is set up correctly and is running.
+6. Check network connectivity: Verify that there are no network connectivity issues between Power BI and Azure SQL DB. You can use tools such as Telnet to test the connectivity.
+7. Check Azure SQL DB service status: If none of the above solutions work, check the status of the Azure SQL DB service to see if there are any known issues.",low,low,Frank,15-04-2023,Lucas,16-04-2023,18,Raleigh,35.8109436,-78.60021973
+14,PowerBI,"How can I fix a language issue in Power BI Report Server when the report is 
+not displaying in the desired language?","You can try the following solutions:
+1. Ensure that the desired language is set as the default language: Check that the desired language is set as the default language in the Report Server settings.
+2. Verify that the report has been created in the desired language: Ensure that the report has been created in the language that you want to view it in. If the report has been created in a different language, it may not display correctly.
+3. Check the language settings in the report: Verify that the language settings in the report are correct and match the desired language. This can be done by going to the ""Report Language Settings"" option in the ""File"" menu of the Power BI Desktop application.
+4. Ensure that the language pack is installed: Make sure that the language pack for the desired language is installed on the Report Server.
+5. Check the user's language preferences: If the report is still not displaying in the desired language, check that the user's language preferences are set to the desired language.
+6. Check the browser language settings: Verify that the browser language settings are set to the desired language. This can be done in the browser settings.
+7. Try clearing the browser cache",critical,high,Bob,05-12-2022,Katherine,07-12-2022,35,Norwalk,33.90202332,-118.079155
+15,PowerBI,How to resolve the Power BI API token issue in the Azure ADFS Setup?,"The reason this is not working is by default Azure AD will block ROPC flow for a Federated account. This flow only works if you are using a cloud account (onmicrosoft.com domain) for security reasons. If you need to authenticate with a Federated account, it's better if you use the ADAL library. We have an ADAL Java library here.
+https://github.com/AzureAD/azure-activedirectory-library-for-java/wiki/Acquiring-Tokens-with-username-and-password
+
+Also, please note that:-
+Microsoft recommends you do not use the ROPC flow. In most scenarios, more secure alternatives are available and recommended. This flow requires a very high degree of trust in the application, and carries risks which are not present in other flows. You should only use this flow when other more secure flows can't be used.
+
+Reference:
+https://github.com/MicrosoftDocs/azure-docs/issues/34108",high,low,Bob,22-11-2021,Daniel,25-11-2021,11,Muskegon,43.23951721,-86.19662476
+16,Azure Storage,If Azure Data Lake Storage Gen2 throws error indicating some operation failed.,"Check the detailed error message thrown by Azure Data Lake Storage Gen2. If the error is a transient failure, retry the operation. For further help, contact Azure Storage support, and provide the request ID in error message.",medium,medium,Grace,09-06-2020,Iris,10-06-2020,35,Bridgeton,39.44585037,-75.22688294
+17,Azure Storage,"If the error message contains the string ""Forbidden"", the service principal or managed identity you use might not have sufficient permission to access Azure Data Lake Storage Gen2.","To troubleshoot this error, see Copy and transform data in Azure Data Lake Storage Gen2.",low,low,Alice,15-04-2023,Daniel,18-04-2023,23,Painesville,41.72412872,-81.24591065
+18,Azure Storage,"If the error message contains the string ""InternalServerError"", the error is returned by Azure Data Lake Storage Gen2.","The error might be caused by a transient failure. If so, retry the operation. If the issue persists, contact Azure Storage support and provide the request ID from the error message.",high,low,Henry,05-12-2022,Harry,07-12-2022,12,Painesville,41.72412872,-81.24591065
+19,Azure Storage,"If the error message is Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host, your integration runtime has a network issue in connecting to Azure Data Lake Storage Gen2.","In the firewall rule setting of Azure Data Lake Storage Gen2, make sure Azure Data Factory IP addresses are in the allowed list",critical,high,Frank,22-11-2021,Olivia,23-11-2021,18,Gaithersburg,39.12841034,-77.20714569
+20,Azure Storage,"If the error message is This endpoint does not support BlobStorageEvents or SoftDelete, you are using an Azure Data Lake Storage Gen2 linked service to connect to an Azure Blob Storage account that enables Blob storage events or soft delete.","Try the following options：
+1. If you still want to use an Azure Data Lake Storage Gen2 linked service, upgrade your Azure Blob Storage to Azure Data Lake Storage Gen2. For more information, see Upgrade Azure Blob Storage with Azure Data Lake Storage Gen2 capabilities.
+2. Switch your linked service to Azure Blob Storage.
+3. Disable Blob storage events or soft delete in your Azure Blob Storage account.",medium,low,Emily,22-11-2021,Finn,25-11-2021,8,South Gate,33.96234512,-118.2134171
+21,Azure Storage,The copy activity is not able to pick files from Azure Data Lake Storage Gen2,"Change the file name to avoid the reserved list for Parquet below:
+
+The file name contains _metadata.
+The file name starts with . (dot).",low,high,Grace,11-11-2020,Iris,13-11-2020,11,Chicago,41.89551926,-87.71821594
+22,Azure Storage,ADLS Gen2 failed for forbidden: Storage operation % on % get failed with 'Operation returned an invalid status code 'Forbidden'.,"Check your Azure storage account network settings to see whether the public network access is disabled. If disabled, use a managed virtual network integration runtime and create a private endpoint to access.",low,low,Bob,13-05-2020,Lucas,16-05-2020,3,Chicago,41.89551926,-87.71821594
+23,Azure Storage,While I try to access Azure it is showing Invalid property during copy activity,"Edit the dataset or pipeline JSON definition to make the types consistent, and then rerun the deployment.",medium,medium,Bob,27-08-2020,Harry,30-08-2020,17,Tempe,33.35738754,-111.9551849
+24,Azure Storage,Troubleshooting connectivity to Blob Storage using Azure Storage Explorer with Private Endpoint,"If that points to some kind of “403 - Authorization Error”, you need to isolate based on what kind of error it is and why it is coming. Some common scenarios here could be in-sufficient roles, Firewall and VNET configurations etc. Ensure that you have right access already in place.
+In case, if points to error such as “Account Does Not Exsist”, first verify the account exists and hasn’t been deleted. In case you have a setup, where in you are making use of Hosts File by specifying IP of the storage account, kindly ensure that you are having updated public IP mentioned in the host file entry. The file can be found at the path C:\Windows\System32\drivers\etc. Although, the public IP does not get changed that often however still verify it again too. If the IP has got updated then also this message may appear as explorer won’t be find out the account with the one mentioned in file. In that scenario, kindly update the entry in the Hosts file with the current public IP Address for the storage account.
+If there are any other error observed specific to storage explorer, you can review this link as well.",medium,high,Grace,27-08-2020,Harry,29-08-2020,35,Los Angeles,34.02759934,-118.2654419
+25,Azure Time Series Insights,can't find my environment in the Gen2 Explorer,This problem might occur if you don't have permissions to access the Time Series Insights environment. Users need a reader-level access role to view their Time Series Insights environment.,medium,medium,Bob,27-08-2020,Iris,29-08-2020,21,Stafford,38.42340851,-77.40523529
+26,Azure Time Series Insights,No data is seen in the Gen2 Explorer,"1. Azure Time Series Insights supports only JSON data.
+2. need to provide the key that has service connect permissions. Select either the iothubowner or service policy. Both have service connect permissions.
+3. Data will appear in your Azure Time Series Insights explorer within a few minutes after the environment and its data are first created.",low,low,Frank,09-12-2022,Nathan,10-12-2022,17,Stafford,38.42340851,-77.40523529
+27,Azure Time Series Insights,"Some data shows, but some is missing in the Time  Series Insights",This problem might occur when you send events without the Time Series ID field in the payload,low,low,Henry,09-12-2022,Lucas,12-12-2022,36,Cleveland,41.47253799,-81.73633575
+28,Azure Time Series Insights,"Data was showing, but now ingestion has stopped in TSI",Your hub access key was regenerated and your environment needs to be updated,critical,high,Grace,16-07-2023,Harry,17-07-2023,29,Lake Forest,38.55315399,-121.395546
+29,Azure Time Series Insights,My event source's Timestamp property name doesn't work,"Ensure that the timestamp property value that comes from your event source as a JSON string is in the format yyyy-MM-ddTHH:mm:ss.FFFFFFFK. Here's an example: 2008-04-12T12:53Z.
+
+Keep in mind that the timestamp property name is case-sensitive.",medium,high,David,25-09-2021,Katherine,27-09-2021,11,Caguas,18.22931862,-66.37058258
+30,Azure Time Series Insights,I can't view or edit my Time Series Model,"You might be accessing a Time Series Insights S1 or S2 environment.
+You might not have permissions to view and edit the model.
+Users need contributor-level access to edit and view their Time Series Model. To verify the current access levels and grant additional access, go to the Data Access Policies section on your Time Series Insights resource in the Azure portal.
+Time Series Models are supported only in pay-as-you-go environments.",medium,low,Henry,16-01-2022,Emma,19-01-2022,27,Las Vegas,36.17177963,-115.1391754
+31,Azure Time Series Insights,All my instances in the Gen2 Explorer lack a parent,This problem might occur if your environment doesn't have a Time Series Model hierarchy defined,high,medium,Alice,16-01-2022,Daniel,18-01-2022,13,Caguas,18.24009323,-66.37051392
+32,Azure Time Series Insights,"Facing problem to copy (and tranform) records between two Azure TSI
+ environments","We need to create another TSI environment and transfer all the data from an old TSI instance with minor modifications (for example, convert true/false values to 1/0)",medium,high,Alice,17-09-2021,Gabriella,20-09-2021,8,Caguas,18.21837044,-66.3705368
+33,Azure Time Series Insights,Missing instances in Time Series Insights UI,"Please double check if you set the timestamp property in your Event Source: https://learn.microsoft.com/en-us/azure/time-series-insights/concepts-streaming-ingestion-event-sources#event-source-timestamp
+
+If you did, you can send old data by setting the timestamp accordingly in your payload.",low,low,David,17-09-2021,James,18-09-2021,4,Caguas,18.29227638,-66.3706131
+34,Azure Time Series Insights,In Time Series Insights API 'aggregates' is not supported for environment," get all the instances you need with the search api,Then loop through the instances you get in the response to call the aggregates by id one by one. And finally sum the results yourself to have a daily result for all the telemetry sensors responding to your search.
+
+Note: You can only make 9 aggregate calls at the same time",high,low,Charlie,17-09-2021,James,18-09-2021,35,Caguas,18.20439339,-66.37050629
+35,Azure Time Series Insights,How to get difference between two dates in seconds using Time Series Expression Syntax in Azure Time Series Insights Explorer,"TSI is an depreciated service in Azure and there are not much features (inbuilt functions) available in it to explore data. Therefore, I suggest you to use Azure Data Explorer to work with the Event Hub Data.
+
+Azure Data Explorer provides inbuild datetime_diff  function which allows to calculate the period in many supported formats based on your requirement using simple Kusto Query Language.
+
+datetime_diff(): Calculates calendarian difference between two datetime values.",medium,medium,Grace,17-09-2021,Emma,20-09-2021,36,Philadelphia,39.96036911,-75.23828888
+36,Azure Time Series Insights,What are four key jobs of Azure time series Insights?,"Azure Time Series Insights has four key jobs:
+
+It's fully integrated with cloud gateways like Azure IoT Hub and Azure Event Hubs. It easily connects to these event sources and parses JSON from messages and structures that have data in clean rows and columns. It joins metadata with telemetry and indexes your data in a columnar store.
+Azure Time Series Insights manages the storage of your data. To make sure that data is always easily accessible, it stores your data in memory and SSDs for up to 400 days. You can interactively query billions of events in seconds–on demand.
+Azure Time Series Insights provides out-of-the-box visualization through the Azure Time Series Insights Explorer.
+Azure Time Series Insights provides a query service, both in the Azure Time Series Insights Explorer and by using APIs that are easy to integrate to embed your time series data into custom applications.",high,low,Bob,17-09-2021,Madison,19-09-2021,11,Philadelphia,39.96036911,-75.23828888
+37,Azure Time Series Insights,which data sources are currently supported by Azure time series Insights Gen 2?,Azure Time Series Insights Gen2 supports the JavaScript SDK.,low,low,Henry,17-09-2021,Nathan,18-09-2021,8,Mesa,33.43722153,-111.8398285
+38,Azure Time Series Insights,Does Azure have a time series database?,"You can use Azure Data Explorer to develop a complete time series service. Azure Data Explorer includes native support for creating, manipulating, and analyzing multiple time series with near real-time monitoring.",medium,high,Bob,17-09-2021,Katherine,19-09-2021,2,Caguas,18.26306915,-66.37058258
+39,Azure Time Series Insights,How do I create Azure time series insights?,"Follow these steps to create an environment:
+Sign in to the Azure portal.
+Select the + Create a resource button.
+Select the Internet of Things category, and select Time Series Insights.
+On the Time Series Insights page, select Create.
+Fill in the required parameters. ...
+Select Create to begin the provisioning process.",high,low,Henry,19-10-2023,Lucas,21-10-2023,2,Virginia Beach,36.83761978,-76.17993927
+40,Azure Time Series Insights,How many streaming event sources can be supported by Azure time series Insights Gen 2?,Your Azure Time Series Insights Gen2 environment can have up to two streaming event sources.,low,low,Grace,08-12-2022,Madison,09-12-2022,19,Caguas,18.29704666,-66.37062836
+41,Azure Time Series Insights,I am unable to find any such option to migrate time series insight.,"TSI Gen2 stores the data on the storage account. You can access Storage overview - Azure Time Series Insights Gen2 | Microsoft Docs. TSI Gen2 doesn't have capability to bulk import data, so you would need to ingest it again through Hubs.
+
+Note: Don't delete your Azure Time Series Insights Gen2 files. Manage related data from within Azure Time Series Insights Gen2 only.",high,high,Henry,08-12-2022,Finn,09-12-2022,2,Caguas,18.2323761,-66.37059784
+42,Azure Time Series Insights,Could not observe events sent to Azure time series insight explorer,Check if you had set the event-source for your Azure TSI environment or not. Just for your reference - http://learniotwithzain.com/2019/03/near-real-time-iot-data-exploration-using-azure-time-series-insights/,medium,low,David,27-12-2021,Daniel,28-12-2021,36,Caguas,18.21974373,-66.37056732
+43,Azure Time Series Insights,What’s the SLA for Azure Time Series Insights?,Azure IoT Hub provides a 99.9-percent SLA under the Azure SLA,low,medium,Emily,27-12-2021,Lucas,28-12-2021,33,Hilliard,40.03102875,-83.13726807
+44,GCP Cloud Storage,"I tried to create a bucket but received the following error:
+
+409 Conflict. Sorry, that name is not available. Please try a different one.","The bucket name you tried to use (e.g. gs://cats or gs://dogs) is 
+already taken. Cloud Storage has a global namespace so you may not name a bucket with the same name as an existing bucket. Choose a name that is not being used.",medium,medium,Charlie,17-06-2022,Iris,19-06-2022,11,Dallas,32.71627045,-96.76869202
+45,GCP Cloud Storage,How can I serve my content over HTTPS without using a load balancer," You can serve static content through HTTPS using direct URIs such as https://storage.googleapis.com/my-bucket/my-object. For other options to serve your content through a custom domain over SSL, you can:
+
+1. Use a third-party Content Delivery Network with Cloud Storage.
+2. Serve your static website content from Firebase Hosting instead of Cloud Storage.",high,high,Frank,17-06-2022,Lucas,19-06-2022,3,Glendale,33.5399437,-112.1772079
+46,GCP Cloud Storage,"I get an Access denied error message for a web page served by my 
+website","Check that the object is shared publicly.
+If you previously uploaded and shared an object, but then upload a new version of it, then you must reshare the object publicly. This is because the public permission is replaced with the new upload.",medium,medium,David,24-11-2021,Gabriella,25-11-2021,11,Moreno Valley,33.92159271,-117.263176
+47,GCP Cloud Storage,I get an error when I attempt to make my data public,"Make sure that you have the setIamPolicy permission for your object or bucket. This permission is granted, for example, in the Storage Admin role. If you have the setIamPolicy permission and you still get an error, your bucket might be subject to public access prevention, which does not allow access to allUsers or allAuthenticatedUsers. Public access prevention might be set on the bucket directly, or it might be enforced through an organization policy that is set at a higher level.
+",medium,medium,Henry,24-11-2021,Madison,27-11-2021,5,Los Angeles,34.09048843,-118.3643875
+48,GCP Cloud Storage," I am prompted to download my page's content, instead of being able to 
+view it in my browser.","If you specify a MainPageSuffix as an object that does not have a web
+ content type, then instead of serving the page, site visitors are prompted to download the content. To resolve this issue, update the content-type metadata entry to a suitable value, such as text/html.",critical,high,Frank,24-11-2021,Nathan,27-11-2021,2,Miami,25.88852501,-80.17294312
+49,GCP Cloud Storage,I'm seeing increased latency when uploading or downloading,"Use the gsutil perfdiag command to run performance diagnostics from the affected environment. Consider the following common causes of upload and download latency:
+
+CPU or memory constraints: The affected environment's operating system should have tooling to measure local resource consumption such as CPU usage and memory usage.
+
+Disk IO constraints: As part of the gsutil perfdiag command, use the rthru_file and wthru_file tests to gauge the performance impact caused by local disk IO.
+
+Geographical distance: Performance can be impacted by the physical separation of your Cloud Storage bucket and affected environment, particularly in cross-continental cases. Testing with a bucket located in the same region as your affected environment can identify the extent to which geographic separation is contributing to your latency.
+
+If applicable, the affected environment's DNS resolver should use the EDNS(0) protocol so that requests from the environment are routed through an appropriate Google Front End.",high,low,Henry,24-11-2021,Daniel,25-11-2021,7,Brooklyn,40.66577148,-73.89246368
+50,GCP Cloud Storage,"I'm seeing increased latency when accessing Cloud Storage with gcloud 
+storage, gsutil, or one of the client libraries.","The CLIs and the client libraries automatically retry requests when it's
+ useful to do so, and this behavior can effectively increase latency as seen from the end user. Use the Cloud Monitoring metric storage.googleapis.com/api/request_count to see if Cloud Storage is consistenty serving a retryable response code, such as 429 or 5xx.",high,low,David,30-04-2021,Olivia,01-05-2021,22,Bronx,40.84583664,-73.86468506
+51,GCP Cloud Storage,"Do I need to enable billing if I was granted access to someone else's 
+bucket?","No, in this case another individual has already set up a Google Cloud project and either granted you access to the entire project or to one of their buckets and the objects it contains. Once you authenticate, typically with your Google account, you can read or write data according to the access that you were granted.
+",low,medium,Emily,05-12-2020,Daniel,08-12-2020,11,Philadelphia,39.95473099,-75.20536804
+52,GCP Cloud Storage,"While performing a resumable upload, I received error and the 
+message Failed to parse Content-Range header.","he value you used in your Content-Range header is invalid. For example, Content-Range: */* is invalid and instead should be specified as Content-Range: bytes */*. If you receive this error, your current resumable upload is no longer active, and you must start a new resumable upload.
+",medium,medium,Grace,05-12-2020,Olivia,07-12-2020,17,San Diego,32.90143967,-117.1196289
+53,GCP Cloud Storage,"Requests to a public bucket directly, or via Cloud CDN, are failing with a 
+HTTP 401: Unauthorized and an Authentication Required response.","Check that your client, or any intermediate proxy, is not adding an
+Authorization header to requests to Cloud Storage. Any request with an Authorization header, even if empty, is validated as if it were an authentication attempt.",low,low,Grace,04-06-2022,Madison,05-06-2022,23,Albuquerque,35.02748108,-106.7064819
+54,GCP Cloud Storage,"How to get data that is older than 6 weeks from GCP metrics explorer 
+API","By Default monitoring API stores data only up to 6 weeks only. If you 
+need data for more than 6 weeks or long term data then as per data retention policy you can extend up to 24 months. There is no additional cost for this extended retention policy.",high,low,Bob,18-09-2022,Madison,21-09-2022,21,Troy,42.73004913,-73.68952942
+55,GCP Cloud Storage,How can I maximize the availability of my data?,"Consider storing your data in a multi-region or dual-region bucket location if high availability is a top requirement. All data is stored geo-redundantly in these locations, which means your data is stored in at least two geographically separated regions. In the unlikely event of a region-wide outage, such as one caused by a natural disaster, buckets in geo-redundant locations remain available, with no need to change storage paths. Also,
+ because object listing in a bucket is always strongly consistent, regardless of bucket location, there is a zero recovery time objective (RTO) in most circumstances for dual- and multi-regions. Note that to achieve uninterrupted service, other products, such as Compute Engine instances, must be set up to be geo-redundant as well.",high,high,Charlie,14-09-2023,Emma,15-09-2023,33,Vista,33.21121979,-117.2510605
+56,GCP Cloud Storage,How can I get a summary of space usage for a Cloud Storage bucket?,"You can use Cloud Monitoring for daily monitoring of your bucket's byte
+ count, or you can use the gsutil du command to get the total bytes in your bucket at a given moment. For more information, see Getting a bucket's size.",medium,low,Charlie,26-04-2021,Daniel,28-04-2021,12,Brooklyn,40.65559006,-73.9330368
+57,GCP Cloud Storage,"I created a bucket, but don't remember which project I created it in. How can I find it?","For most common Cloud Storage operations, you only need to specify the relevant bucket's name, not the project associated with the bucket. In general, you only need to specify a project identifier when creating a bucket or listing buckets in a project. For more information, see When to specify a project.
+
+To find which project contains a specific bucket:
+
+If you are searching over a moderate number of projects and buckets, use the Google Cloud console, select each project, and view the buckets it contains.
+Otherwise, go to the storage.bucket.get page in the API Explorer and enter the bucket's name in the bucket field. When you click Authorize and Execute, the associated project number appears as part of the response. To get the project name, use the project number in the following terminal command:
+
+gcloud projects list | grep PROJECT_NUMBER",high,low,Alice,26-04-2021,Katherine,29-04-2021,3,Aurora,39.71852112,-104.8660431
+58,GCP Cloud Storage,How do I prevent race conditions for my Cloud Storage resources?,"The easiest way to avoid race conditions is to use a naming scheme that
+ avoids more than one mutation of the same object name. Often such a design is not feasible, in which case you can use preconditions in your request. Preconditions allow the request to proceed only if the actual state of the resource matches the criteria specified in the preconditions.",medium,medium,Henry,26-04-2021,Emma,28-04-2021,16,Glenview,42.07277679,-87.80484772
+59,GCP Cloud Storage,How do I Reset Google Cloud?,"f you need to reset your Google Cloud for any reason, you can reset Google Cloud by following the steps below.
+
+1. First of all you need to go to Google Cloud Console (https://console.cloud.google.com/) and then you need to sign in with your Google Account.
+
+2. And then from the console dashboard, you need to select the project you want to reset.
+
+3. And then you need to click on the gear icon in the top-right corner to access the project settings.
+
+4. And now you have to scroll down to the ""Shut Down"" section and then you have to click on the ""Shut Down"" button.
+
+5. And now you have to confirm that you want to close the project by typing the Project ID in the text field provided.
+
+6. Finally you have to click on the ""Shut Down"" button again to confirm the action.",high,high,Emily,09-12-2023,Nathan,11-12-2023,25,Catonsville,39.26510239,-76.77329254
+60,GCP Cloud Storage,Unable to view or edit a shared Google Drive access.,If that is the case then ask the owner to give you the access and then the issue should be resolved.,high,high,Grace,09-12-2023,Gabriella,11-12-2023,26,East Lansing,42.9221611,-84.01567841
+61,GCP Cloud Storage,Unable to access the latest version of Google Cloud.,"If that is the case then all you need to do is update your Google Cloud 
+to latest version so that the same is resolved.",medium,medium,Grace,09-12-2023,Katherine,10-12-2023,15,Far Rockaway,40.60063934,-73.76037598
+62,GCP Cloud Storage,Google Cloud is not being able to perform print operations,"In such cases simply check for updates in your printer and update
+ immediately to fix the same",medium,medium,Charlie,26-11-2020,Olivia,29-11-2020,14,Massillon,40.80009842,-81.51615143
+63,GCP Cloud Storage,"I should have permission to access a certain bucket or object, but when I attempt to do so, I get a 403 - Forbidden error with a message that is similar to: example@email.com does not have storage.objects.get access to the Google Cloud Storage object.","You are missing a IAM permission for the bucket or object that is required to complete the request. If you expect to be able to make the request but cannot, perform the following checks:
+
+1. Is the grantee referenced in the error message the one you expected? If the error message refers to an unexpected email address or to ""Anonymous caller"", then your request is not using the credentials you intended. This could be because the tool you are using to make the request was set up with the credentials from another alias or entity, or it could be because the request is being made on your behalf by a service account.
+
+2. Is the permission referenced in the error message one thought you needed? If the permission is unexpected, it's likely because the tool you're using requires additional access in order to complete your request. For example, in order to bulk delete objects in a bucket, gcloud must first construct a list of objects in the bucket to delete. This portion of the bulk delete action requires the storage.objects.list permission, which might be surprising, given that the goal is object deletion, which normally requires only the storage.objects.delete permission. If this is the cause of your error message, make sure you're granted IAM roles that have the additional necessary permissions.
+
+3. Are you granted the IAM role on the intended resource or parent resource? For example, if you're granted the Storage Object Viewer role for a project and you're trying to download an object, make sure the object is in a bucket that's in the project; you might inadvertently have the Storage Object Viewer permission for a different project.",low,medium,Grace,12-06-2022,Nathan,13-06-2022,15,Hampton,37.047966,-76.39997101
+64,GCP Cloud SQL,Lost connection to MySQL server during query when dumping table,"The source may have become unavailable, or the dump contained packets too large.
+Make sure the external primary is available to connect, or use mysqldump with the max_allowed_packet option.",medium,low,David,12-06-2022,James,14-06-2022,11,Jacksonville,30.35342217,-81.51309204
+65,GCP Cloud SQL,"The initial data migration was successful, but no data is being replicated.","One possible root cause could be your source database has defined replication flags which result in some or all database changes not being replicated over.
+Make sure the replication flags such as binlog-do-db, binlog-ignore-db, replicate-do-db or replicate-ignore-db are not set in a conflicting way.
+
+Run the command show master status on the primary instance to see the current settings.",medium,medium,David,12-10-2020,Nathan,15-10-2020,16,Opa Locka,25.94878006,-80.28707886
+66,GCP Cloud SQL,"The initial data migration was successful but data replication stops 
+working after a while.","Things to try:
+1. Check the replication metrics for your replica instance in the Cloud Monitoring section of the Google Cloud console.
+2. The errors from the MySQL IO thread or SQL thread can be found in Cloud Logging in the mysql.err log files.
+3. The error can also be found when connecting to the replica instance. Run the command SHOW SLAVE STATUS, and check for the following fields in the output:
+   Slave_IO_Running
+   Slave_SQL_Running
+   Last_IO_Error
+   Last_SQL_Error",medium,low,Frank,12-10-2020,Emma,15-10-2020,28,Miami,25.93001556,-80.16291046
+67,GCP Cloud SQL,I am getting an error as mysqld check failed: data disk is full.,"The data disk of the replica instance is full.
+Increase the disk size of the replica instance. You can either manually increase the disk size or enable auto storage increase.",critical,high,David,03-09-2021,Olivia,06-09-2021,27,Bismarck,46.81184387,-100.7877197
+68,GCP Cloud SQL,"Error message: The slave is connecting ... master has purged binary logs 
+containing GTIDs that the slave requires.","The primary Cloud SQL instance has automatic backups and binary logs and point-in-time recovery is enabled, so it should have enough logs for the replica to be able to catch up. However, in this case although the binary logs exist, the replica doesn't know which row to start reading from.
+Create a new dump file using the correct flag settings, and configure the external replica using that file
+
+1. Connect to your mysql client through a Compute Engine instance.
+2. Run mysqldump and use the --master-data=1 and --flush-privileges flags.
+Important: Do not include the --set-gtid-purged=OFF flag.
+
+Learn more.
+
+3. Ensure that the dump file just created contains the SET @@GLOBAL.GTID_PURGED='...' line.
+4. Upload the dump file to a Cloud Storage bucket and configure the replica using the dump file.",medium,medium,Frank,13-11-2023,Katherine,16-11-2023,27,Beloit,42.50544357,-89.04527283
+69,GCP Cloud SQL,After enabling a flag the instance loops between panicking and crashing.,"Contact customer support to request flag removal followed by a hard 
+drain. This forces the instance t restart on a different host with a fresh configuration without the undesired flag or setting.",critical,high,Charlie,28-05-2023,Lucas,30-05-2023,18,Lancaster,34.69719696,-118.0742645
+70,GCP Cloud SQL,"Getting the error message Bad syntax for dict arg when trying to set a 
+flag.","Complex parameter values, such as comma-separated lists, require special treatment when used with gcloud commands.",medium,low,Grace,26-10-2023,Madison,28-10-2023,18,Los Angeles,34.03905487,-118.2566757
+71,GCP Cloud SQL,"HTTP Error 409: Operation failed because another operation was already 
+in progress.","There is already a pending operation for your instance. Only one 
+operation is allowed at a time. Try your request after the current operation is complete.",medium,low,Henry,26-10-2023,Daniel,27-10-2023,11,East Lansing,42.74964523,-84.4508667
+72,GCP Cloud SQL,The import operation is taking too long.,"Too many active connections can interfere with import operations.
+Close unused operations. Check the CPU and memory usage of your Cloud SQL instance to make sure there are plenty of resources available. The best way to ensure maximum resources for the import is to restart the instance before beginning the operation.
+
+A restart:
+
+Closes all connections.
+Ends any tasks that may be consuming resources.",critical,high,Bob,05-04-2022,Olivia,06-04-2022,12,Los Angeles,34.02927399,-118.4060135
+73,GCP Cloud SQL,An import operation failing with an error that a table doesn't exist.,"Tables can have foreign key dependencies on other tables, and depending on the order of operations, one or more of those tables might not yet exist during the import operation.
+Things to try:
+
+Add the following line at the start of the dump file:
+SET FOREIGN_KEY_CHECKS=0;
+  
+Additionally, add this line at the end of the dump file:
+SET FOREIGN_KEY_CHECKS=1;
+  
+These settings deactivate data integrity checks while the import operation is in progress, and reactivate them after the data is loaded. This doesn't affect the integrity of the data on the database, because the data was already validated during the creation of the dump file.",high,low,Frank,17-09-2022,Daniel,19-09-2022,2,Catonsville,39.26510239,-76.77329254
+74,GCP Cloud SQL,getting error as Audit logs are not found.,"Data-Access logs are only written if the operation is an authenticated 
+user-driven API call that creates, modifies, or reads user-created data, or if the operation accesses configuration files or metadata of resources.",high,medium,Bob,17-09-2022,Finn,20-09-2022,6,East Lansing,42.9221611,-84.01567841
+75,GCP Cloud SQL,getting Operations information is not found in logs as an error,"You want to find more information about an operation.
+For example, a user was deleted but you can't find out who did it. The logs show the operation started but don't provide any more information. You must enable audit logging for detailed and personal identifying information (PII) like this to be logged.",medium,low,Grace,17-09-2022,Daniel,20-09-2022,1,Grove City,39.86989212,-83.10421753
+76,GCP Cloud SQL,Slow performance after restarting MySQL.,"Cloud SQL allows caching of data in the InnoDB buffer pool. However, 
+after a restart, this cache is always empty, and all reads require a round trip to the backend to get data. As a result, queries can be slower than expected until the cache is filled.",high,high,Charlie,31-01-2021,Finn,02-02-2021,28,Edinburg,26.29763413,-98.17961884
+77,GCP Cloud SQL,I am unable to manually delete binary logs.,"Binary logs cannot be manually deleted. Binary logs are automatically 
+deleted with their associated automatic backup, which generally happens after about seven days.",medium,low,David,31-01-2021,Daniel,03-02-2021,19,Houston,29.83435631,-95.33792877
+78,GCP Cloud SQL,How do I find information about temporary files.,"A file named ibtmp1 is used for storing temporary data. This file is reset upon database restart. To find information about temporary file usage, connect to the database and execute the following query:
+SELECT * FROM INFORMATION_SCHEMA.FILES WHERE TABLESPACE_NAME='innodb_temporary'\G",high,medium,Emily,31-01-2021,Nathan,03-02-2021,17,Hampton,37.047966,-76.39997101
+79,GCP Cloud SQL,How do I find out about table sizes.,"This information is available in the database.
+Connect to the database and execute the following query:
+
+SELECT TABLE_SCHEMA, TABLE_NAME, sum(DATA_LENGTH+INDEX_LENGTH)/pow(1024,2) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA NOT IN ('PERFORMANCE_SCHEMA','INFORMATION_SCHEMA','SYS','MYSQL') GROUP BY TABLE_SCHEMA, TABLE_NAME;",high,low,Frank,06-11-2023,Iris,07-11-2023,34,Milpitas,37.43395615,-121.8810654
+80,GCP Cloud SQL,My data is being automatically deleted.,"Most likely a script is running somewhere in your environment.
+Look in the logs around the time of the deletion and see if there's a rogue script running from a dashboard or another automated process.",high,medium,Emily,09-11-2023,Harry,12-11-2023,36,Jersey City,40.74726105,-74.04908752
+81,GCP Cloud SQL,"When I am trying to delete a user getting error message as user cannot be 
+deleted.","The user probably has objects in the database that depend on it. You need to drop those objects or reassign them to another user.
+Find out which objects are dependent on the user, then drop or reassign those objects to a different user.",low,medium,Henry,17-06-2023,Nathan,20-06-2023,34,Hamtramck,42.39984894,-83.05892944
+82,GCP Cloud SQL,Unable to create read replica - unknown error.,"There's probably a more specific error in the log files. Inspect the logs in Cloud Logging to find the actual error.
+If the error is: set Service Networking service account as servicenetworking.serviceAgent role on consumer project, then disable and re-enable the Service Networking API. This action creates the service account necessary to continue with the process.",high,medium,Emily,06-09-2022,Nathan,08-09-2022,14,Palatine,42.111866,-88.04871368
+83,GCP Cloud SQL,While changing parallel replication flags resulting an error.,"An incorrect value is set for one of or more of these flags.
+On the primary instance that's displaying the error message, set the parallel replication flags:
+
+1. Modify the binlog_transaction_dependency_tracking and transaction_write_set_extractionflags:
+binlog_transaction_dependency_tracking=COMMIT_ORDER
+transaction_write_set_extraction=OFF
+
+2. Add the slave_pending_jobs_size_max flag:
+slave_pending_jobs_size_max=33554432
+
+3. Modify the transaction_write_set_extraction flag:
+transaction_write_set_extraction=XXHASH64
+
+4. Modify the binlog_transaction_dependency_tracking flag:
+binlog_transaction_dependency_tracking=WRITESET",low,low,Bob,29-08-2022,James,30-08-2022,35,New York,40.73124313,-73.98880768
+84,GCP Cloud SQL,getting error when deleting an instance.,"If deletion protection is enabled for an instance, confirm your plans to 
+delete the instance. Then disable deletion protection before deleting the instance.",medium,high,Henry,08-11-2022,Nathan,10-11-2022,15,Chicago,41.89561081,-87.70015717
+85,GCP Cloud SQL,I am not able to see the current operation's status.,"The Google Cloud console reports only success or failure when the operation is done. It isn't designed to show warnings or other updates
+Run the gcloud sql operations list command to list all operations for the given Cloud SQL instance.",low,medium,Charlie,08-11-2022,Nathan,11-11-2022,13,Winnetka,34.20909119,-118.5710068
+86,GCP Functions,"Deployment failure: Insufficient permissions to (re)configure a trigger
+(permission denied for bucket <BUCKET_ID>). Please, give owner permissions to the editor role of the bucket and try again.","Reset this service account to the default role.
+or
+Grant the runtime service account the cloudfunctions.serviceAgent role.
+or
+Grant the runtime service account the storage.buckets.{get, update} and the resourcemanager.projects.get permissions.",low,medium,Henry,12-06-2022,Iris,15-06-2022,1,Staten Island,40.56678009,-74.11734772
+87,GCP Functions,Function deployment fails while executing function's global scope,"For a more detailed error message, look into your function's build logs, 
+as well as your function's runtime logs. If it is unclear why your function failed to execute its global scope, consider temporarily moving the code into the request invocation, using lazy initialization of the global variables. This allows you to add extra log statements around your client libraries, which could be timing out on their instantiation (especially if they are calling other services), or crashing/throwing exceptions altogether. Additionally, you can try increasing the function timeout.",medium,medium,Henry,11-10-2021,Harry,12-10-2021,6,Corona,40.74636841,-73.85482025
+88,GCP Functions,"When a function is attempted to be deployed, its global scope is used.","1. Disable Lifecycle Management on the buckets required by Container Registry.
+2. Delete all the images of affected functions. You can access build logs to find the image paths. Reference script to bulk delete the images. Note that this does not affect the functions that are currently deployed.
+3. Redeploy the functions.",high,medium,Henry,11-10-2021,Katherine,14-10-2021,1,College Station,30.60759926,-96.31684876
+89,GCP Functions,"Serving permission error due to ""allow internal traffic only"" configuration","You can:
+1. Ensure that the request is coming from your Google Cloud project or VPC Service Controls service perimeter.
+or
+2. Change the ingress settings to allow all traffic for the function.",high,medium,Henry,09-06-2020,Katherine,10-06-2020,35,North Hills,34.23563004,-118.4847031
+90,GCP Functions,Getting error as your client does not have permission to the requested URL,"Make sure that your requests include an Authorization: 
+Bearer ID_TOKEN header, and that the token is an ID token, not an access or refresh token. If you are generating this token manually with a service account's private key, you must exchange the self-signed JWT token for a Google-signed Identity token, following this guide.",medium,medium,Henry,09-06-2020,Finn,10-06-2020,22,Corona,40.74636841,-73.85482025
+91,GCP Functions,Attempt to invoke function using curl redirects to Google login page,"Make sure you specify the name of your function correctly. You can 
+always check using gcloud functions call which returns the correct 404 error for a missing function.",high,high,Bob,09-06-2020,Harry,11-06-2020,22,Elk Grove,38.41569519,-121.4185638
+92,GCP Functions,"error message
+In Cloud Logging logs: ""Infrastructure cannot communicate with function. 
+There was likely a crash or deadlock in the user-provided code.""","Different runtimes can crash under different scenarios. To find the root cause, output detailed debug level logs, check your application logic, and test for edge cases.
+
+The Cloud Functions Python37 runtime currently has a known limitation 
+on the rate that it can handle logging. If log statements from a Python37 runtime instance are written at a sufficiently high rate, it can produce this error. Python runtime versions >= 3.8 do not have this limitation. We encourage users to migrate to a higher version of the Python runtime to avoid this issue.",low,high,Grace,09-06-2020,Finn,10-06-2020,33,Union City,37.58989716,-122.018959
+93,GCP Functions,"Function stopping in mid-execution, or continues running after my code 
+finishes","If your function terminates early, you should make sure all your function's asynchronous tasks have been completed before doing any of the following:
+
+1. returning a value
+2. resolving or rejecting a returned Promise object (Node.js functions only)
+3. throwing uncaught exceptions and/or errors
+sending an HTTP response
+calling a callback function
+If your function fails to terminate once all asynchronous tasks have completed, you should verify that your function is correctly signaling Cloud Functions once it has completed. In particular, make sure that you perform one of the operations listed above as soon as your function has finished its asynchronous tasks.",medium,medium,Emily,09-06-2020,Olivia,10-06-2020,16,Palatine,42.111866,-88.04871368
+94,GCP Functions,"getting error as User with Project Viewer or Cloud Function role cannot 
+deploy a function","Assign the user an additional role, the Service Account User IAM role 
+(roles/iam.serviceAccountUser), scoped to the Cloud Functions runtime service account.",low,high,Henry,09-06-2020,Harry,10-06-2020,21,Toms River,39.95728302,-74.19393158
+95,GCP Functions,"Deployment service account missing the Service Agent role when 
+deploying functions",Reset this service account to the default role.,medium,low,Frank,09-06-2020,Harry,10-06-2020,2,Chicago,41.89518356,-87.73563385
+96,GCP Functions,"Deployment service account missing Pub/Sub permissions when 
+deploying an event-driven function","You can:
+
+Reset this service account to the default role.
+or
+Grant the pubsub.subscriptions.* and pubsub.topics.* permissions to your service account manually.",low,high,Alice,15-04-2023,Iris,16-04-2023,4,Scottsdale,33.59082031,-111.9261398
+97,GCP Functions,Getting default runtime service account does not exist as error message,"1. Specify a user managed runtime service account when deploying your 1st gen functions.
+or
+2. Recreate the default service account @appspot.gserviceaccount.com for your project.",medium,medium,Emily,05-12-2022,Iris,06-12-2022,12,Sun Valley,34.21546936,-118.3703384
+98,GCP Functions,User with Project Editor role cannot make a function public,"1. Assign the deployer either the Project Owner or the Cloud Functions Admin role, both of which contain the cloudfunctions.functions.setIamPolicy permission.
+or
+2.Grant the permission manually by creating a custom role.",high,high,Frank,22-11-2021,Emma,25-11-2021,14,Saint Louis,38.59045029,-90.26371002
+99,GCP Functions,Is there a way to keep track of dates on Firestore using cloud functions,"One approach would be to create a scheduled function that scans your database for documents to update every minute or every five minutes. This is a good approach for popular applications with a consistent usage rate.
+
+To improve efficiency, you can use a Firestore onCreate trigger to defer a Cloud Task Function to update the document. As each purchase is made, a Cloud Task can be scheduled to execute in 72 hours from the purchase date where it sets promo to true. This has the benefit of not running jobs that don't have any documents to update.",critical,high,Emily,22-11-2021,Katherine,25-11-2021,10,Lakewood,41.53972244,-80.52366638
+100,GCP Functions,"Is it possible to route Google Cloud Functions egress traffic through 
+multiple rotating IPs?","1. Create a Serverless VPC Connector
+2. Create a Cloud NAT Gateway and have it include the subnet that you assigned to the Serverless VPC Connector
+3. Configure your Cloud Function to use the Serverless VPC Connector for all its egress
+Now that specific Cloud Function using that specific VPC Connector will route its outbound traffic through that specific Cloud NAT Gateway.
+
+You can repeat this process as many times as necessary. To make this work with your Cloud Function you will have to deploy them as multiple Cloud Functions rather than a single Cloud Function.",medium,low,Bob,11-11-2020,Iris,14-11-2020,3,Bridgeton,39.44585037,-75.22688294
+101,GCP Functions,How do I set entry point in cloud function?,"In the Entry point field, enter the entry point to your function in your 
+source code. This is the code that will be executed when your function runs. The value of this flag must be a function name or fully-qualified class name that exists in your source code",medium,medium,Grace,13-05-2020,Daniel,16-05-2020,32,Scottsdale,33.4447937,-111.9264908
+102,GCP Functions,Serverless VPC Access connector is not ready or does not exist,"List your subnets to check whether your connector uses a /28 subnet mask.
+
+If it does not, recreate or create a new connector to use a /28 subnet. Note the following considerations:
+
+1. If you recreate the connector, you do not need to redeploy other functions. You might experience a network interruption as the connector is recreated.
+
+2. If you create a new alternate connector, redeploy your functions to use the new connector and then delete the original connector. This method avoids network interruption.",medium,low,Charlie,27-08-2020,Finn,29-08-2020,36,Fontana,34.15697479,-117.4821548
+103,GCP Functions,Cloud Functions logs are not appearing in Log Explorer,"Use the client library interface to flush buffered log entries before 
+exiting the function or use the library to write log entries synchronously. You can also synchronously write logs directly to stdout or stderr.",medium,high,Henry,27-08-2020,Olivia,28-08-2020,13,Apex,35.73103714,-78.85575104
+104,GCP Functions,Cloud Functions logs are not appearing via Log Router Sink,"Make sure no exclusion filter is set for 
+resource.type=""cloud_functions""",high,high,Alice,27-08-2020,Olivia,30-08-2020,34,New York,40.78022003,-73.95043945
+105,GCP Functions,"Python GCP Cloud function connecting to Cloud SQL Error: 
+""ModuleNotFoundError: No module named 'google.cloud.sql'""","The error “ModuleNotFoundError: No module named 'google.cloud.sql” occurs as the google.cloud.sql module is not installed in the requirement.txt file. You can install it by using the command pip install “google.cloud.sql”
+
+Also I would like to suggest you to check whether you have assigned the “Cloud SQL Client” role to the service account.
+
+Also I would like to suggest you to check whether you have enabled the ""Cloud SQL Admin API"" within your Google cloud project.
+
+As you already stated VPC connector and Cloud SQL instance are in the same VPC network, also make sure that they are in the same region.
+
+Also check whether the installed packages in the requirements.txt are compatible with your python version you are using.",low,high,Emily,09-12-2022,Nathan,10-12-2022,7,Fresno,36.74282074,-119.7823944
+106,GCP Functions,"Unable to give Cloud Functions Admin role to my account on Firebase's 
+project setting","The origin of this issue is unknow. You can go to Manage roles, find 
+Cloud Functions Admin and create a custom role out of it. Then you can add this role instead.
+",medium,high,Emily,09-12-2022,Madison,10-12-2022,29,Toms River,39.95728302,-74.19393158
